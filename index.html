@@ -27,7 +27,7 @@ input,select{background:var(--panel);border:1px solid var(--line);border-radius:
 .book-info{padding:15px}.book-title{font-size:17px;line-height:1.3;margin:0 0 7px}.author{font:12px Arial,sans-serif;color:var(--muted)}.rating{margin-top:15px;font:12px Arial,sans-serif;color:var(--gold2)}.tag{display:inline-block;border:1px solid #6b593d;color:var(--gold2);font:9px Arial,sans-serif;letter-spacing:1px;padding:5px 7px;text-transform:uppercase;margin-top:10px}
 .book-meta{display:grid;gap:5px;margin-top:13px;color:var(--muted);font:11px/1.5 Arial,sans-serif}.book-meta span{display:block}
 .review-pending{display:block;color:#b69a70;font:10px/1.5 Arial,sans-serif;margin-top:9px}
-.review-details{border-top:1px solid var(--line);margin-top:14px;padding-top:11px}.review-details summary{cursor:pointer;color:var(--gold2);font:11px Arial,sans-serif;letter-spacing:.5px;list-style:none}.review-details summary::-webkit-details-marker{display:none}.review-details summary:after{content:"＋";float:right}.review-details[open] summary:after{content:"−"}.review-text{color:var(--muted);font:12px/1.75 Arial,sans-serif;margin-top:12px}
+.review-details{border-top:1px solid var(--line);margin-top:14px;padding-top:11px}.review-details summary{cursor:pointer;color:var(--gold2);font:11px Arial,sans-serif;letter-spacing:.5px;list-style:none}.review-details summary::-webkit-details-marker,.original-review summary::-webkit-details-marker{display:none}.review-details summary:after,.original-review summary:after{content:"＋";float:right}.review-details[open] summary:after,.original-review[open] summary:after{content:"−"}.review-text{color:var(--muted);font:12px/1.75 Arial,sans-serif;margin-top:12px}.original-review{border-top:1px solid var(--line);margin-top:15px;padding-top:12px}.original-review summary{cursor:pointer;color:var(--gold);font:11px Arial,sans-serif;list-style:none}
 .empty{grid-column:1/-1;border:1px solid var(--line);padding:42px 20px;text-align:center;color:var(--muted);font:14px/1.7 Arial,sans-serif}.empty strong{display:block;font:22px Georgia,serif;color:var(--gold2);margin-bottom:8px}
 .note{border-left:2px solid var(--gold);padding:15px 18px;color:var(--muted);font:13px/1.7 Arial,sans-serif;margin-top:35px;max-width:740px}
 footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77736d;font:10px Arial,sans-serif;letter-spacing:1.5px}
@@ -68,11 +68,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
     </div>
     <div class="rating">★ 7,0/10 · Recomendaria</div>
     <span class="tag">Avaliado</span>
-    <details class="review-details">
-      <summary>Ver registro parcial da resenha</summary>
-      <p class="review-text">O livro e seu conteúdo são excelentes. Gostei da estrutura em nove sermões, que podem ser lidos de forma independente e sem necessidade de continuidade, tornando a leitura flexível. Também apreciei a visão de Lewis.</p>
-      <small class="review-pending">Este é apenas o trecho preservado no registro atual. A resenha integral será inserida a partir do texto original.</small>
-    </details>
+    <details class="review-details"><summary>Ler minha resenha</summary><p class="review-text">O livro e seu conteúdo são excelentes. Sua organização em nove sermões independentes torna a leitura bastante flexível: não é necessário seguir uma ordem rígida nem ler todos os textos continuamente.</p><p class="review-text">O leitor aprecia a visão de Lewis, embora reconheça que essa identificação também é pessoal.</p><p class="review-text">A principal dificuldade está no estilo argumentativo do autor. Em seus textos não ficcionais, Lewis costuma abrir diversas ramificações e parênteses em suas linhas de pensamento. Apesar de sua inteligência e profundidade, acompanhar todas essas conexões pode ser difícil, causando confusão em alguns momentos.</p><p class="review-text">A experiência de leitura em grupo foi positiva, pois permitiu esclarecer ideias e passagens que não haviam sido compreendidas individualmente.</p><details class="original-review"><summary>Ver meu texto original</summary><p class="review-text">O livro e o conteúdo são excelentes. O livro é bom de ler porque é bem dividido, são nove sermões, você não precisa necessariamente ler um para entender o próximo, nem precisam ser lidos de maneira contínua, então deixa o livro flexível.</p><p class="review-text">Gosto da visão do Lewis, mas é algo bem pessoal.</p><p class="review-text">Agora, sobre ele escrevendo algo que não seja ficção, é do perfil abrir muitos parênteses nas linhas de pensamento, ele é muito inteligente, mas eu nem tanto kkkkk. Logo, quando haviam 10 parênteses abertos sobre um tema, eu não conseguia fazer a conexão para fechar todos e concluir o tema aberto, então em algumas partes eu fiquei um pouco confuso.</p><p class="review-text">Minha experiência com o livro foi em uma leitura em grupo, o que me ajudava a esclarecer coisas que não havia entendido.</p></details></details>
   </div>
 </article>
 </div>
@@ -95,8 +91,9 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
       editionYear: 2017,
       readYear: null,
       editionIsbn: "9788578600655",
-      reviewComplete: false,
-      review: "O livro e seu conteúdo são excelentes. Gostei da estrutura em nove sermões, que podem ser lidos de forma independente e sem necessidade de continuidade, tornando a leitura flexível. Também apreciei a visão de Lewis."
+      reviewComplete: true,
+      review: "O livro e seu conteúdo são excelentes. Sua organização em nove sermões independentes torna a leitura bastante flexível: não é necessário seguir uma ordem rígida nem ler todos os textos continuamente.\n\nO leitor aprecia a visão de Lewis, embora reconheça que essa identificação também é pessoal.\n\nA principal dificuldade está no estilo argumentativo do autor. Em seus textos não ficcionais, Lewis costuma abrir diversas ramificações e parênteses em suas linhas de pensamento. Apesar de sua inteligência e profundidade, acompanhar todas essas conexões pode ser difícil, causando confusão em alguns momentos.\n\nA experiência de leitura em grupo foi positiva, pois permitiu esclarecer ideias e passagens que não haviam sido compreendidas individualmente.",
+      originalReview: "O livro e o conteúdo são excelentes. O livro é bom de ler porque é bem dividido, são nove sermões, você não precisa necessariamente ler um para entender o próximo, nem precisam ser lidos de maneira contínua, então deixa o livro flexível.\n\nGosto da visão do Lewis, mas é algo bem pessoal.\n\nAgora, sobre ele escrevendo algo que não seja ficção, é do perfil abrir muitos parênteses nas linhas de pensamento, ele é muito inteligente, mas eu nem tanto kkkkk. Logo, quando haviam 10 parênteses abertos sobre um tema, eu não conseguia fazer a conexão para fechar todos e concluir o tema aberto, então em algumas partes eu fiquei um pouco confuso.\n\nMinha experiência com o livro foi em uma leitura em grupo, o que me ajudava a esclarecer coisas que não havia entendido."
     }
   ];
   const get = id => document.getElementById(id);
@@ -137,15 +134,20 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
         ("Ano da leitura: " + (book.readYear || "não informado"))
       ].filter(Boolean).map(item => '<span>' + item + '</span>').join("");
       const reviewLabel = book.reviewComplete ? "Ler minha resenha" : "Ver registro parcial da resenha";
-      const reviewNotice = book.reviewComplete ? "" : '<small class="review-pending">Este é apenas o trecho preservado no registro atual. A resenha integral será inserida a partir do texto original.</small>';
+      const originalBlock = book.originalReview
+        ? '<details class="original-review"><summary>Ver meu texto original</summary>' +
+          book.originalReview.split("\\n\\n").map(p => '<p class="review-text">' + p + '</p>').join("") +
+          '</details>'
+        : '';
       return '<article class="book"><div class="cover"><img class="cover-image" src="' +
         book.cover + '" alt="Capa de ' + book.title + '" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.nextElementSibling.style.display=&quot;flex&quot;">' +
         '<div class="cover-fallback"><strong>' + book.title + '</strong><span>' + book.author.toUpperCase() +
         '</span></div></div><div class="book-info"><h3 class="book-title">' + book.title +
         '</h3><div class="author">' + book.author + '</div><div class="book-meta">' + meta +
         '</div><div class="rating">★ ' + rating + '/10' + recommendation + '</div><span class="tag">' +
-        book.status + '</span><details class="review-details"><summary>' + reviewLabel + '</summary><p class="review-text">' +
-        book.review + '</p>' + reviewNotice + '</details></div></article>';
+        book.status + '</span><details class="review-details"><summary>' + reviewLabel + '</summary>' +
+        book.review.split("\\n\\n").map(p => '<p class="review-text">' + p + '</p>').join("") +
+        originalBlock + '</details></div></article>';
     }).join("");
   }
 
