@@ -20,9 +20,13 @@ h1{font-size:clamp(44px,7vw,82px);font-weight:400;line-height:1.02;margin:22px 0
 input,select{background:var(--panel);border:1px solid var(--line);border-radius:3px;color:var(--ink);padding:13px 14px;min-width:0}input::placeholder{color:#817d76}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
 .book{background:var(--panel);border:1px solid #292a30;border-radius:4px;overflow:hidden;transition:transform .2s,border-color .2s}.book:hover{transform:translateY(-4px);border-color:#766447}
-.cover{aspect-ratio:2/3;background:linear-gradient(145deg,#292720,#17181d);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;border-bottom:1px solid var(--line);position:relative}.cover:before{content:"";position:absolute;inset:9px;border:1px solid #c1a47755}
-.cover-title{font-size:21px;line-height:1.25;color:#e8dcc7;z-index:1}.cover-author{font:10px Arial,sans-serif;letter-spacing:1.4px;color:var(--gold);margin-top:12px;z-index:1}
+.cover{aspect-ratio:2/3;background:linear-gradient(145deg,#292720,#17181d);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line);position:relative}
+.cover:before{content:"";position:absolute;inset:8px;border:1px solid #c1a47755;pointer-events:none;z-index:2}
+.cover-image{width:100%;height:100%;object-fit:cover;display:block}
+.cover-fallback{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center}
+.cover-fallback strong{font-size:21px;line-height:1.25;color:#e8dcc7;font-weight:400}.cover-fallback span{font:10px Arial,sans-serif;letter-spacing:1.4px;color:var(--gold);margin-top:12px}
 .book-info{padding:15px}.book-title{font-size:17px;line-height:1.3;margin:0 0 7px}.author{font:12px Arial,sans-serif;color:var(--muted)}.rating{margin-top:15px;font:12px Arial,sans-serif;color:var(--gold2)}.tag{display:inline-block;border:1px solid #6b593d;color:var(--gold2);font:9px Arial,sans-serif;letter-spacing:1px;padding:5px 7px;text-transform:uppercase;margin-top:10px}
+.review-details{border-top:1px solid var(--line);margin-top:14px;padding-top:11px}.review-details summary{cursor:pointer;color:var(--gold2);font:11px Arial,sans-serif;letter-spacing:.5px;list-style:none}.review-details summary::-webkit-details-marker{display:none}.review-details summary:after{content:"＋";float:right}.review-details[open] summary:after{content:"−"}.review-text{color:var(--muted);font:12px/1.75 Arial,sans-serif;margin-top:12px}
 .empty{grid-column:1/-1;border:1px solid var(--line);padding:42px 20px;text-align:center;color:var(--muted);font:14px/1.7 Arial,sans-serif}.empty strong{display:block;font:22px Georgia,serif;color:var(--gold2);margin-bottom:8px}
 .note{border-left:2px solid var(--gold);padding:15px 18px;color:var(--muted);font:13px/1.7 Arial,sans-serif;margin-top:35px;max-width:740px}
 footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77736d;font:10px Arial,sans-serif;letter-spacing:1.5px}
@@ -49,8 +53,20 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
 </div>
 <div class="grid" id="books">
 <article class="book" data-title="O Peso da Glória" data-author="C. S. Lewis" data-rating="7.0" data-recommend="true">
-  <div class="cover"><div class="cover-title">O Peso da Glória</div><div class="cover-author">C. S. LEWIS</div></div>
-  <div class="book-info"><h3 class="book-title">O Peso da Glória</h3><div class="author">C. S. Lewis</div><div class="rating">★ 7,0/10 · Recomendaria</div><span class="tag">Avaliado</span></div>
+  <div class="cover">
+    <img class="cover-image" src="https://acdn-us.mitiendanube.com/stores/002/101/838/products/1173001146-o-peso-da-gloria-livro-c-s-lewis-editora-thomas-nelson-sku-45888-capa-lateral-jpg-e85a3bb7ea798ee8ed16757114816855-1024-1024.webp" alt="Capa de O Peso da Glória, de C. S. Lewis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="cover-fallback"><strong>O Peso da Glória</strong><span>C. S. LEWIS</span></div>
+  </div>
+  <div class="book-info">
+    <h3 class="book-title">O Peso da Glória</h3>
+    <div class="author">C. S. Lewis</div>
+    <div class="rating">★ 7,0/10 · Recomendaria</div>
+    <span class="tag">Avaliado</span>
+    <details class="review-details">
+      <summary>Ler minha resenha</summary>
+      <p class="review-text">O livro e seu conteúdo são excelentes. Gostei da estrutura em nove sermões, que podem ser lidos de forma independente e sem necessidade de continuidade, tornando a leitura flexível. Também apreciei a visão de Lewis.</p>
+    </details>
+  </div>
 </article>
 </div>
 </section>
@@ -65,7 +81,9 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
       author: "C. S. Lewis",
       rating: 7.0,
       recommend: true,
-      status: "Avaliado"
+      status: "Avaliado",
+      cover: "https://acdn-us.mitiendanube.com/stores/002/101/838/products/1173001146-o-peso-da-gloria-livro-c-s-lewis-editora-thomas-nelson-sku-45888-capa-lateral-jpg-e85a3bb7ea798ee8ed16757114816855-1024-1024.webp",
+      review: "O livro e seu conteúdo são excelentes. Gostei da estrutura em nove sermões, que podem ser lidos de forma independente e sem necessidade de continuidade, tornando a leitura flexível. Também apreciei a visão de Lewis."
     }
   ];
   const get = id => document.getElementById(id);
@@ -99,12 +117,14 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
     container.innerHTML = shown.map(book => {
       const rating = Number(book.rating).toFixed(1).replace(".", ",");
       const recommendation = book.recommend ? " · Recomendaria" : "";
-      return '<article class="book"><div class="cover"><div class="cover-title">' +
-        book.title + '</div><div class="cover-author">' + book.author.toUpperCase() +
-        '</div></div><div class="book-info"><h3 class="book-title">' + book.title +
+      return '<article class="book"><div class="cover"><img class="cover-image" src="' +
+        book.cover + '" alt="Capa de ' + book.title + '" loading="lazy" onerror="this.style.display=\\'none\\';this.nextElementSibling.style.display=\\'flex\\'">' +
+        '<div class="cover-fallback"><strong>' + book.title + '</strong><span>' + book.author.toUpperCase() +
+        '</span></div></div><div class="book-info"><h3 class="book-title">' + book.title +
         '</h3><div class="author">' + book.author + '</div><div class="rating">★ ' +
         rating + '/10' + recommendation + '</div><span class="tag">' +
-        book.status + '</span></div></article>';
+        book.status + '</span><details class="review-details"><summary>Ler minha resenha</summary><p class="review-text">' +
+        book.review + '</p></details></div></article>';
     }).join("");
   }
 
