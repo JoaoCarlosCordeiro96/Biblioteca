@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca do João</title>
+  <meta name="description" content="Uma biblioteca pessoal de leituras, ideias e avaliações.">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #111318;
+      color: #eee8dc;
+      font-family: Georgia, serif;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #302d29;
+    }
+
+    .logo { font-size: 21px; letter-spacing: 3px; }
+    header span { color: #b69a70; font-size: 11px; letter-spacing: 2px; }
+
+    main { max-width: 1150px; margin: auto; padding: 75px 25px; }
+
+    .eyebrow {
+      color: #b69a70;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    h1 { font-size: clamp(42px, 7vw, 76px); font-weight: normal; }
+    h1 em { color: #b69a70; }
+
+    .intro {
+      color: #aaa49a;
+      font: 15px Arial, sans-serif;
+      line-height: 1.8;
+      max-width: 510px;
+      margin-top: 22px;
+    }
+
+    .line { border-top: 1px solid #39342e; margin: 65px 0 35px; }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    h2 { font-size: 25px; font-weight: normal; }
+
+    input {
+      background: #1b1d22;
+      border: 1px solid #39342e;
+      color: #eee8dc;
+      padding: 12px 15px;
+      border-radius: 3px;
+      width: 230px;
+      max-width: 45%;
+    }
+
+    .empty {
+      border: 1px solid #39342e;
+      padding: 55px 20px;
+      text-align: center;
+      color: #aaa49a;
+      line-height: 1.8;
+    }
+
+    .empty strong {
+      display: block;
+      color: #b69a70;
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      border-top: 1px solid #302d29;
+      padding: 25px;
+      text-align: center;
+      color: #77736d;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+
+    @media(max-width:600px) {
+      header { padding: 20px; }
+      main { padding-top: 55px; }
+      .section-title { align-items: flex-start; gap: 15px; flex-direction: column; }
+      input { max-width: 100%; width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">BIBLIOTECA.</div>
+    <span>JOÃO CARLOS</span>
+  </header>
+
+  <main>
+    <div class="eyebrow">MINHA BIBLIOTECA PESSOAL</div>
+
+    <h1>Livros <em>que ficam.</em></h1>
+
+    <p class="intro">
+      Uma coleção de histórias, ideias e pensamentos.
+      Um registro pessoal de cada leitura e das marcas
+      que cada livro deixou pelo caminho.
+    </p>
+
+    <div class="line"></div>
+
+    <div class="section-title">
+      <h2>Minha coleção</h2>
+      <input
+        type="search"
+        placeholder="Buscar um livro..."
+        aria-label="Buscar um livro"
+      >
+    </div>
+
+    <div class="empty">
+      <strong>Uma biblioteca em construção.</strong>
+      Em breve, minhas leituras estarão reunidas aqui.
+    </div>
+  </main>
+
+  <footer>
+    BIBLIOTECA DO JOÃO · UMA VIDA DE LEITURAS
+  </footer>
+</body>
+</html>
