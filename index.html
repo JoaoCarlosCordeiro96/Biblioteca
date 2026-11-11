@@ -47,27 +47,74 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
 <select id="sort" aria-label="Ordenar livros"><option value="title">Ordem alfabética</option><option value="rating">Melhor nota</option></select>
 <select id="filter" aria-label="Filtrar livros"><option value="all">Todos os livros</option><option value="recommended">Recomendaria</option></select>
 </div>
-<div class="grid" id="books"></div>
+<div class="grid" id="books">
+<article class="book" data-title="O Peso da Glória" data-author="C. S. Lewis" data-rating="7.0" data-recommend="true">
+  <div class="cover"><div class="cover-title">O Peso da Glória</div><div class="cover-author">C. S. LEWIS</div></div>
+  <div class="book-info"><h3 class="book-title">O Peso da Glória</h3><div class="author">C. S. Lewis</div><div class="rating">★ 7,0/10 · Recomendaria</div><span class="tag">Avaliado</span></div>
+</article>
+</div>
 </section>
 <div class="note">As avaliações exibidas são opiniões pessoais do leitor. Informações ainda não confirmadas serão adicionadas somente após conferência do catálogo original.</div>
 </main>
 <footer>BIBLIOTECA DO JOÃO · UMA VIDA DE LEITURAS</footer>
 <script>
-const books = [
- {title:"O Peso da Glória",author:"C. S. Lewis",rating:7.0,recommend:true,review:"O livro e seu conteúdo são excelentes. A estrutura em nove sermões permite que os textos sejam lidos de forma independente, sem exigir continuidade, tornando a leitura flexível. Aprecia a visão de Lewis.",status:"Avaliado"}
-];
-const $ = id => document.getElementById(id);
-function render(){
- const query=$("search").value.trim().toLocaleLowerCase("pt-BR");
- const filter=$("filter").value;
- const sort=$("sort").value;
- let shown=books.filter(b=>(b.title+" "+b.author).toLocaleLowerCase("pt-BR").includes(query)&&(filter!=="recommended"||b.recommend));
- shown.sort((a,b)=>sort==="rating"?(b.rating??-1)-(a.rating??-1):a.title.localeCompare(b.title,"pt-BR"));
- $("count").textContent=shown.length+(shown.length===1?" título":" títulos");
- $("books").innerHTML=shown.length?shown.map(b=>'<article class="book"><div class="cover"><div class="cover-title">'+b.title+'</div><div class="cover-author">'+b.author+'</div></div><div class="book-info"><h3 class="book-title">'+b.title+'</h3><div class="author">'+b.author+'</div><div class="rating">★ '+b.rating.toFixed(1).replace(".",",")+'/10 · '+(b.recommend?"Recomendaria":"")+'</div><span class="tag">'+b.status+'</span></div></article>').join(""):'<div class="empty"><strong>Nenhum livro encontrado.</strong>Tente outro título ou ajuste os filtros.</div>';
-}
-["search","sort","filter"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",render));
-render();
+(function () {
+  const books = [
+    {
+      title: "O Peso da Glória",
+      author: "C. S. Lewis",
+      rating: 7.0,
+      recommend: true,
+      status: "Avaliado"
+    }
+  ];
+  const get = id => document.getElementById(id);
+  const normalize = value => (value || "").toLowerCase();
+
+  function render() {
+    const container = get("books");
+    if (!container) return;
+
+    const query = normalize(get("search") && get("search").value).trim();
+    const filter = get("filter") ? get("filter").value : "all";
+    const sort = get("sort") ? get("sort").value : "title";
+
+    const shown = books.filter(book => {
+      const searchable = normalize(book.title + " " + book.author);
+      return searchable.includes(query) && (filter !== "recommended" || book.recommend);
+    });
+
+    shown.sort((a, b) => sort === "rating"
+      ? b.rating - a.rating
+      : a.title.localeCompare(b.title));
+
+    const count = get("count");
+    if (count) count.textContent = shown.length + (shown.length === 1 ? " título" : " títulos");
+
+    if (!shown.length) {
+      container.innerHTML = '<div class="empty"><strong>Nenhum livro encontrado.</strong>Tente outro título ou ajuste os filtros.</div>';
+      return;
+    }
+
+    container.innerHTML = shown.map(book => {
+      const rating = Number(book.rating).toFixed(1).replace(".", ",");
+      const recommendation = book.recommend ? " · Recomendaria" : "";
+      return '<article class="book"><div class="cover"><div class="cover-title">' +
+        book.title + '</div><div class="cover-author">' + book.author.toUpperCase() +
+        '</div></div><div class="book-info"><h3 class="book-title">' + book.title +
+        '</h3><div class="author">' + book.author + '</div><div class="rating">★ ' +
+        rating + '/10' + recommendation + '</div><span class="tag">' +
+        book.status + '</span></div></article>';
+    }).join("");
+  }
+
+  ["search", "sort", "filter"].forEach(id => {
+    const control = get(id);
+    if (control) control.addEventListener(id === "search" ? "input" : "change", render);
+  });
+
+  try { render(); } catch (error) { console.error("Erro ao montar o catálogo:", error); }
+})();
 </script>
 </body>
 </html>
