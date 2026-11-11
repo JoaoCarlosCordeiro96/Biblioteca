@@ -3,160 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Biblioteca pessoal de João Carlos: livros lidos, notas e resenhas.">
+<meta name="description" content="Biblioteca pessoal de João Carlos: livros lidos, avaliações e resenhas.">
 <meta name="theme-color" content="#111318">
 <title>Biblioteca do João — Livros que ficam</title>
 <style>
 :root{--bg:#111318;--panel:#191b20;--line:#34343a;--ink:#eee8dc;--muted:#aaa49a;--gold:#c1a477;--gold2:#e0c59a}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
 header{height:76px;padding:0 max(5vw,22px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:#111318ed;backdrop-filter:blur(12px);z-index:5}
-.logo{font-size:18px;letter-spacing:3px}.byline{font:11px Arial,sans-serif;letter-spacing:2px;color:var(--gold)}
-main{max-width:1180px;margin:auto;padding:70px 24px 90px}.kicker{font:11px Arial,sans-serif;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
-h1{font-size:clamp(44px,7vw,82px);font-weight:400;line-height:1.02;margin:22px 0 18px}h1 em{color:var(--gold);font-style:normal}
+.logo{font-size:18px;letter-spacing:3px}
+.byline{font:11px Arial,sans-serif;letter-spacing:2px;color:var(--gold)}
+main{max-width:1180px;margin:auto;padding:70px 24px 90px}
+.kicker{font:11px Arial,sans-serif;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+h1{font-size:clamp(44px,7vw,82px);font-weight:400;line-height:1.02;margin:22px 0 18px}
+h1 em{color:var(--gold);font-style:normal}
 .lead{max-width:590px;color:var(--muted);font:15px/1.8 Arial,sans-serif}
-.stats{display:flex;margin-top:42px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:650px}.stat{padding:19px 35px 19px 0;margin-right:35px}.stat strong{display:block;font-size:28px;font-weight:400;color:var(--gold2)}.stat span{font:10px Arial,sans-serif;letter-spacing:1.6px;color:var(--muted);text-transform:uppercase}
-.section{margin-top:66px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:25px}h2{font-size:28px;font-weight:400;margin:0}.count{font:12px Arial,sans-serif;color:var(--muted)}
-.toolbar{display:grid;grid-template-columns:minmax(220px,1fr) 190px 170px;gap:10px;margin:24px 0}
-input,select{background:var(--panel);border:1px solid var(--line);border-radius:3px;color:var(--ink);padding:13px 14px;min-width:0}input::placeholder{color:#817d76}
+.stats{display:flex;margin-top:42px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:720px}
+.stat{padding:19px 35px 19px 0;margin-right:35px}
+.stat strong{display:block;font-size:28px;font-weight:400;color:var(--gold2)}
+.stat span{font:10px Arial,sans-serif;letter-spacing:1.6px;color:var(--muted);text-transform:uppercase}
+.section{margin-top:66px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:25px}
+h2{font-size:28px;font-weight:400;margin:0}
+.count{font:12px Arial,sans-serif;color:var(--muted)}
+.toolbar{display:grid;grid-template-columns:minmax(220px,1fr) 190px 190px;gap:10px;margin:24px 0}
+input,select{background:var(--panel);border:1px solid var(--line);border-radius:3px;color:var(--ink);padding:13px 14px;min-width:0}
+input::placeholder{color:#817d76}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
-.book{background:var(--panel);border:1px solid #292a30;border-radius:4px;overflow:hidden;transition:transform .2s,border-color .2s}.book:hover{transform:translateY(-4px);border-color:#766447}
-.cover{aspect-ratio:2/3;background:#17181d;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.book{background:var(--panel);border:1px solid #292a30;border-radius:4px;overflow:hidden;transition:transform .2s,border-color .2s}
+.book:hover{transform:translateY(-4px);border-color:#766447}
+.cover{aspect-ratio:2/3;background:#17181d;overflow:hidden;position:relative}
 .cover-image{width:100%;height:100%;object-fit:cover;display:block}
-.cover-fallback{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center}
-.cover-fallback strong{font-size:21px;line-height:1.25;color:#e8dcc7;font-weight:400}.cover-fallback span{font:10px Arial,sans-serif;letter-spacing:1.4px;color:var(--gold);margin-top:12px}
-.book-info{padding:15px}.book-title{font-size:17px;line-height:1.3;margin:0 0 7px}.author{font:12px Arial,sans-serif;color:var(--muted)}.rating{margin-top:15px;font:12px Arial,sans-serif;color:var(--gold2)}.tag{display:inline-block;border:1px solid #6b593d;color:var(--gold2);font:9px Arial,sans-serif;letter-spacing:1px;padding:5px 7px;text-transform:uppercase;margin-top:10px}
-.book-meta{display:grid;gap:5px;margin-top:13px;color:var(--muted);font:11px/1.5 Arial,sans-serif}.book-meta span{display:block}
-.review-pending{display:block;color:#b69a70;font:10px/1.5 Arial,sans-serif;margin-top:9px}
-.review-details{border-top:1px solid var(--line);margin-top:14px;padding-top:11px}.review-details summary{cursor:pointer;color:var(--gold2);font:11px Arial,sans-serif;letter-spacing:.5px;list-style:none}.review-details summary::-webkit-details-marker,.original-review summary::-webkit-details-marker{display:none}.review-details summary:after,.original-review summary:after{content:"＋";float:right}.review-details[open] summary:after,.original-review[open] summary:after{content:"−"}.review-text{color:var(--muted);font:12px/1.75 Arial,sans-serif;margin-top:12px}.original-review{border-top:1px solid var(--line);margin-top:15px;padding-top:12px}.original-review summary{cursor:pointer;color:var(--gold);font:11px Arial,sans-serif;list-style:none}
-.empty{grid-column:1/-1;border:1px solid var(--line);padding:42px 20px;text-align:center;color:var(--muted);font:14px/1.7 Arial,sans-serif}.empty strong{display:block;font:22px Georgia,serif;color:var(--gold2);margin-bottom:8px}
+.cover-missing{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#24252a,#15161a);color:#77736d}
+.cover-missing svg{width:34px;height:34px;opacity:.65}
+.book-info{padding:15px}
+.book-title{font-size:17px;line-height:1.3;margin:0 0 7px}
+.author{font:12px Arial,sans-serif;color:var(--muted)}
+.book-meta{display:grid;gap:5px;margin-top:13px;color:var(--muted);font:11px/1.5 Arial,sans-serif}
+.book-meta span{display:block}
+.rating{margin-top:14px;font:12px Arial,sans-serif;color:var(--gold2)}
+.rating-unrated{color:#89847a}
+.tag{display:inline-block;border:1px solid #6b593d;color:var(--gold2);font:9px Arial,sans-serif;letter-spacing:1px;padding:5px 7px;text-transform:uppercase;margin-top:10px}
+.review-details{border-top:1px solid var(--line);margin-top:14px;padding-top:11px}
+.review-details summary{cursor:pointer;color:var(--gold2);font:11px Arial,sans-serif;letter-spacing:.5px;list-style:none}
+.review-details summary::-webkit-details-marker{display:none}
+.review-details summary:after{content:"＋";float:right}
+.review-details[open] summary:after{content:"−"}
+.review-text{color:var(--muted);font:12px/1.75 Arial,sans-serif;margin-top:12px}
+.empty{grid-column:1/-1;border:1px solid var(--line);padding:42px 20px;text-align:center;color:var(--muted);font:14px/1.7 Arial,sans-serif}
+.empty strong{display:block;font:22px Georgia,serif;color:var(--gold2);margin-bottom:8px}
 .note{border-left:2px solid var(--gold);padding:15px 18px;color:var(--muted);font:13px/1.7 Arial,sans-serif;margin-top:35px;max-width:740px}
 footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77736d;font:10px Arial,sans-serif;letter-spacing:1.5px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:620px){main{padding-top:48px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.toolbar{grid-template-columns:1fr}.stats{justify-content:space-between}.stat{padding-right:12px;margin-right:10px}.stat strong{font-size:24px}.section-head{align-items:start;flex-direction:column}.cover-title{font-size:18px}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){
+  main{padding-top:48px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .toolbar{grid-template-columns:1fr}
+  .stats{justify-content:space-between}
+  .stat{padding-right:12px;margin-right:10px}
+  .stat strong{font-size:24px}
+  .section-head{align-items:start;flex-direction:column}
+}
 </style>
 </head>
 <body>
 <header><div class="logo">BIBLIOTECA.</div><div class="byline">JOÃO CARLOS</div></header>
 <main>
-<div class="kicker">Minha biblioteca pessoal</div>
-<h1>Livros <em>que ficam.</em></h1>
-<p class="lead">Uma coleção de histórias, ideias e pensamentos. Um registro pessoal de cada leitura e das marcas que cada livro deixou pelo caminho.</p>
-<div class="stats">
-<div class="stat"><strong id="total">1</strong><span>Livro registrado</span></div>
-<div class="stat"><strong id="rated">1</strong><span>Avaliação registrada</span></div>
-<div class="stat"><strong id="average">7,0</strong><span>Média das notas</span></div>
-</div>
-<section class="section">
-<div class="section-head"><h2>Minha coleção</h2><span class="count" id="count">1 título</span></div>
-<div class="toolbar">
-<input id="search" type="search" placeholder="Buscar por título ou autor..." aria-label="Buscar livros">
-<select id="sort" aria-label="Ordenar livros"><option value="title">Ordem alfabética</option><option value="rating">Melhor nota</option></select>
-<select id="filter" aria-label="Filtrar livros"><option value="all">Todos os livros</option><option value="recommended">Recomendaria</option></select>
-</div>
-<div class="grid" id="books">
-<article class="book" data-title="O Peso da Glória" data-author="C. S. Lewis" data-rating="7.0" data-recommend="true">
-  <div class="cover">
-    <img class="cover-image" src="https://acdn-us.mitiendanube.com/stores/002/101/838/products/1173001146-o-peso-da-gloria-livro-c-s-lewis-editora-thomas-nelson-sku-45888-capa-lateral-jpg-e85a3bb7ea798ee8ed16757114816855-1024-1024.webp" alt="Capa de O Peso da Glória, de C. S. Lewis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="cover-fallback"><strong>O Peso da Glória</strong><span>C. S. LEWIS</span></div>
+  <div class="kicker">Minha biblioteca pessoal</div>
+  <h1>Livros <em>que ficam.</em></h1>
+  <p class="lead">Uma coleção de histórias, ideias e pensamentos. Um registro pessoal de cada leitura e das marcas que cada livro deixou pelo caminho.</p>
+
+  <div class="stats">
+    <div class="stat"><strong id="total">66</strong><span>Livros registrados</span></div>
+    <div class="stat"><strong id="rated">5</strong><span>Avaliações registradas</span></div>
+    <div class="stat"><strong id="average">6,9</strong><span>Média das notas</span></div>
   </div>
-  <div class="book-info">
-    <h3 class="book-title">O Peso da Glória</h3>
-    <div class="author">C. S. Lewis</div>
-    <div class="book-meta">
-      <span>192 páginas · Publicado em 2017</span>
-      <span>Edição brasileira cadastrada: 2017</span>
-      <span>Ano da leitura: não informado</span>
+
+  <section class="section">
+    <div class="section-head"><h2>Minha coleção</h2><span class="count" id="count">66 títulos</span></div>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Buscar por título ou autor..." aria-label="Buscar livros">
+      <select id="sort" aria-label="Ordenar livros">
+        <option value="title">Ordem alfabética</option>
+        <option value="rating">Melhor nota</option>
+        <option value="readYear">Ano da leitura</option>
+      </select>
+      <select id="filter" aria-label="Filtrar livros">
+        <option value="all">Todos os livros</option>
+        <option value="recommended">Recomendaria</option>
+        <option value="notRecommended">Não recomendaria</option>
+        <option value="rated">Avaliados</option>
+        <option value="unrated">Ainda sem avaliação</option>
+      </select>
     </div>
-    <div class="rating">★ 7,0/10 · Recomendaria</div>
-    <span class="tag">Avaliado</span>
-    <details class="review-details"><summary>Ler minha resenha</summary><p class="review-text">O livro e seu conteúdo são excelentes. Sua organização em nove sermões independentes torna a leitura bastante flexível: não é necessário seguir uma ordem rígida nem ler todos os textos continuamente.</p><p class="review-text">O leitor aprecia a visão de Lewis, embora reconheça que essa identificação também é pessoal.</p><p class="review-text">A principal dificuldade está no estilo argumentativo do autor. Em seus textos não ficcionais, Lewis costuma abrir diversas ramificações e parênteses em suas linhas de pensamento. Apesar de sua inteligência e profundidade, acompanhar todas essas conexões pode ser difícil, causando confusão em alguns momentos.</p><p class="review-text">A experiência de leitura em grupo foi positiva, pois permitiu esclarecer ideias e passagens que não haviam sido compreendidas individualmente.</p><details class="original-review"><summary>Ver meu texto original</summary><p class="review-text">O livro e o conteúdo são excelentes. O livro é bom de ler porque é bem dividido, são nove sermões, você não precisa necessariamente ler um para entender o próximo, nem precisam ser lidos de maneira contínua, então deixa o livro flexível.</p><p class="review-text">Gosto da visão do Lewis, mas é algo bem pessoal.</p><p class="review-text">Agora, sobre ele escrevendo algo que não seja ficção, é do perfil abrir muitos parênteses nas linhas de pensamento, ele é muito inteligente, mas eu nem tanto kkkkk. Logo, quando haviam 10 parênteses abertos sobre um tema, eu não conseguia fazer a conexão para fechar todos e concluir o tema aberto, então em algumas partes eu fiquei um pouco confuso.</p><p class="review-text">Minha experiência com o livro foi em uma leitura em grupo, o que me ajudava a esclarecer coisas que não havia entendido.</p></details></details>
-  </div>
-</article>
-</div>
-</section>
-<div class="note">As avaliações exibidas são opiniões pessoais do leitor. Informações ainda não confirmadas serão adicionadas somente após conferência do catálogo original.</div>
+    <div class="grid" id="books" aria-live="polite">
+      <article class="book">
+        <div class="cover">
+          <img class="cover-image" src="https://acdn-us.mitiendanube.com/stores/002/101/838/products/1173001146-o-peso-da-gloria-livro-c-s-lewis-editora-thomas-nelson-sku-45888-capa-lateral-jpg-e85a3bb7ea798ee8ed16757114816855-1024-1024.webp" alt="Capa de O Peso da Glória, de C. S. Lewis">
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">O Peso da Glória</h3>
+          <div class="author">C. S. Lewis</div>
+          <div class="book-meta"><span>192 páginas</span><span>Publicado originalmente: 1949</span><span>Edição brasileira: 2017</span><span>Leitura: 2025</span></div>
+          <div class="rating">★ 7,0/10 · Recomendaria</div>
+          <details class="review-details">
+            <summary>Ler minha resenha</summary>
+            <p class="review-text">O livro e seu conteúdo são excelentes. Sua organização em nove sermões independentes torna a leitura bastante flexível: não é necessário seguir uma ordem rígida nem ler todos os textos continuamente.</p>
+            <p class="review-text">O leitor aprecia a visão de Lewis, embora reconheça que essa identificação também é pessoal.</p>
+            <p class="review-text">A principal dificuldade está no estilo argumentativo do autor. Em seus textos não ficcionais, Lewis costuma abrir diversas ramificações e parênteses em suas linhas de pensamento. Apesar de sua inteligência e profundidade, acompanhar todas essas conexões pode ser difícil, causando confusão em alguns momentos.</p>
+            <p class="review-text">A experiência de leitura em grupo foi positiva, pois permitiu esclarecer ideias e passagens que não haviam sido compreendidas individualmente.</p>
+          </details>
+        </div>
+      </article>
+    </div>
+  </section>
+  <div class="note">As notas e resenhas são avaliações pessoais do leitor. Dados bibliográficos que ainda não foram confirmados serão preenchidos após pesquisa ou confirmação da edição.</div>
 </main>
 <footer>BIBLIOTECA DO JOÃO · UMA VIDA DE LEITURAS</footer>
 <script>
 (function () {
-  const books = [
-    {
-      title: "O Peso da Glória",
-      author: "C. S. Lewis",
-      rating: 7.0,
-      recommend: true,
-      status: "Avaliado",
-      cover: "https://acdn-us.mitiendanube.com/stores/002/101/838/products/1173001146-o-peso-da-gloria-livro-c-s-lewis-editora-thomas-nelson-sku-45888-capa-lateral-jpg-e85a3bb7ea798ee8ed16757114816855-1024-1024.webp",
-      pages: 192,
-      publicationYear: 2017,
-      editionYear: 2017,
-      readYear: null,
-      editionIsbn: "9788578600655",
-      reviewComplete: true,
-      review: "O livro e seu conteúdo são excelentes. Sua organização em nove sermões independentes torna a leitura bastante flexível: não é necessário seguir uma ordem rígida nem ler todos os textos continuamente.\n\nO leitor aprecia a visão de Lewis, embora reconheça que essa identificação também é pessoal.\n\nA principal dificuldade está no estilo argumentativo do autor. Em seus textos não ficcionais, Lewis costuma abrir diversas ramificações e parênteses em suas linhas de pensamento. Apesar de sua inteligência e profundidade, acompanhar todas essas conexões pode ser difícil, causando confusão em alguns momentos.\n\nA experiência de leitura em grupo foi positiva, pois permitiu esclarecer ideias e passagens que não haviam sido compreendidas individualmente.",
-      originalReview: "O livro e o conteúdo são excelentes. O livro é bom de ler porque é bem dividido, são nove sermões, você não precisa necessariamente ler um para entender o próximo, nem precisam ser lidos de maneira contínua, então deixa o livro flexível.\n\nGosto da visão do Lewis, mas é algo bem pessoal.\n\nAgora, sobre ele escrevendo algo que não seja ficção, é do perfil abrir muitos parênteses nas linhas de pensamento, ele é muito inteligente, mas eu nem tanto kkkkk. Logo, quando haviam 10 parênteses abertos sobre um tema, eu não conseguia fazer a conexão para fechar todos e concluir o tema aberto, então em algumas partes eu fiquei um pouco confuso.\n\nMinha experiência com o livro foi em uma leitura em grupo, o que me ajudava a esclarecer coisas que não havia entendido."
-    }
-  ];
+  let books = [];
   const get = id => document.getElementById(id);
-  const normalize = value => (value || "").toLowerCase();
+  const normalize = value => (value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+    })[char]);
+  }
 
   function render() {
     const container = get("books");
-    if (!container) return;
+    const query = normalize(get("search").value.trim());
+    const filter = get("filter").value;
+    const sort = get("sort").value;
 
-    const query = normalize(get("search") && get("search").value).trim();
-    const filter = get("filter") ? get("filter").value : "all";
-    const sort = get("sort") ? get("sort").value : "title";
-
-    const shown = books.filter(book => {
-      const searchable = normalize(book.title + " " + book.author);
-      return searchable.includes(query) && (filter !== "recommended" || book.recommend);
+    let shown = books.filter(book => {
+      const searchable = normalize((book.title || "") + " " + (book.author || ""));
+      const matchesQuery = searchable.includes(query);
+      const rated = typeof book.rating === "number";
+      const matchesFilter =
+        filter === "all" ||
+        (filter === "recommended" && book.recommend === true) ||
+        (filter === "notRecommended" && book.recommend === false) ||
+        (filter === "rated" && rated) ||
+        (filter === "unrated" && !rated);
+      return matchesQuery && matchesFilter;
     });
 
-    shown.sort((a, b) => sort === "rating"
-      ? b.rating - a.rating
-      : a.title.localeCompare(b.title));
+    shown.sort((a,b) => {
+      if (sort === "rating") return (b.rating ?? -1) - (a.rating ?? -1) || a.title.localeCompare(b.title,"pt-BR");
+      if (sort === "readYear") return (b.readYear ?? 0) - (a.readYear ?? 0) || a.title.localeCompare(b.title,"pt-BR");
+      return a.title.localeCompare(b.title,"pt-BR");
+    });
 
-    const count = get("count");
-    if (count) count.textContent = shown.length + (shown.length === 1 ? " título" : " títulos");
-
+    get("count").textContent = shown.length + (shown.length === 1 ? " título" : " títulos");
     if (!shown.length) {
       container.innerHTML = '<div class="empty"><strong>Nenhum livro encontrado.</strong>Tente outro título ou ajuste os filtros.</div>';
       return;
     }
 
     container.innerHTML = shown.map(book => {
-      const rating = Number(book.rating).toFixed(1).replace(".", ",");
-      const recommendation = book.recommend ? " · Recomendaria" : "";
-      const meta = [
-        (book.pages ? book.pages + " páginas" : null),
-        (book.publicationYear ? "Primeira publicação: " + book.publicationYear : null),
-        (book.editionYear ? "Edição brasileira: " + book.editionYear : null),
-        ("Ano da leitura: " + (book.readYear || "não informado"))
-      ].filter(Boolean).map(item => '<span>' + item + '</span>').join("");
-      const reviewLabel = book.reviewComplete ? "Ler minha resenha" : "Ver registro parcial da resenha";
-      const originalBlock = book.originalReview
-        ? '<details class="original-review"><summary>Ver meu texto original</summary>' +
-          book.originalReview.split("\n\n").map(p => '<p class="review-text">' + p + '</p>').join("") +
-          '</details>'
+      const title = escapeHtml(book.title);
+      const author = escapeHtml(book.author || "Autor a confirmar");
+      const cover = book.cover
+        ? '<img class="cover-image" src="' + escapeHtml(book.cover) + '" alt="Capa de ' + title + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
         : '';
-      return '<article class="book"><div class="cover"><img class="cover-image" src="' +
-        book.cover + '" alt="Capa de ' + book.title + '" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.nextElementSibling.style.display=&quot;flex&quot;">' +
-        '<div class="cover-fallback"><strong>' + book.title + '</strong><span>' + book.author.toUpperCase() +
-        '</span></div></div><div class="book-info"><h3 class="book-title">' + book.title +
-        '</h3><div class="author">' + book.author + '</div><div class="book-meta">' + meta +
-        '</div><div class="rating">★ ' + rating + '/10' + recommendation + '</div><span class="tag">' +
-        book.status + '</span><details class="review-details"><summary>' + reviewLabel + '</summary>' +
-        book.review.split("\n\n").map(p => '<p class="review-text">' + p + '</p>').join("") +
-        originalBlock + '</details></div></article>';
+      const missingCover = '<div class="cover-missing" ' + (book.cover ? 'style="display:none"' : '') + ' aria-label="Capa ainda não cadastrada"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v18H6.5A2.5 2.5 0 0 1 4 17.5z"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20M8 6h8M8 9h8"/></svg></div>';
+      const metaItems = [];
+      if (book.pages) metaItems.push(book.pages + " páginas");
+      if (book.publicationYear) metaItems.push("Publicado originalmente: " + book.publicationYear);
+      if (book.editionYear) metaItems.push("Edição: " + book.editionYear);
+      if (book.readYear) metaItems.push("Leitura: " + book.readYear);
+      const meta = metaItems.length ? '<div class="book-meta">' + metaItems.map(x=>'<span>'+escapeHtml(x)+'</span>').join("") + '</div>' : "";
+      const rating = typeof book.rating === "number"
+        ? '<div class="rating">★ ' + book.rating.toFixed(1).replace(".",",") + '/10 · ' + (book.recommend ? "Recomendaria" : "Não recomendaria") + '</div>'
+        : '<div class="rating rating-unrated">Sem avaliação registrada</div>';
+      const groupLabel = book.evaluationScope === "conjunta"
+        ? '<span class="tag">Avaliação conjunta</span>'
+        : book.rating === null ? '<span class="tag">Sem avaliação</span>' : '<span class="tag">Avaliado</span>';
+      const review = book.review
+        ? '<details class="review-details"><summary>Ler minha resenha</summary>' + book.review.split("\n\n").map(p=>'<p class="review-text">'+escapeHtml(p)+'</p>').join("") + '</details>'
+        : '';
+      return '<article class="book"><div class="cover">' + cover + missingCover + '</div><div class="book-info"><h3 class="book-title">' + title + '</h3><div class="author">' + author + '</div>' + meta + rating + groupLabel + review + '</div></article>';
     }).join("");
   }
 
-  ["search", "sort", "filter"].forEach(id => {
-    const control = get(id);
-    if (control) control.addEventListener(id === "search" ? "input" : "change", render);
-  });
+  async function loadCatalog() {
+    try {
+      const response = await fetch("./livros.json", {cache:"no-store"});
+      if (!response.ok) throw new Error("Não foi possível carregar livros.json (" + response.status + ")");
+      const data = await response.json();
+      if (!data || !Array.isArray(data.records)) throw new Error("Formato inválido no catálogo.");
+      books = data.records;
+      const rated = books.filter(book => typeof book.rating === "number");
+      get("total").textContent = books.length;
+      get("rated").textContent = rated.length;
+      const average = rated.length ? rated.reduce((sum,book)=>sum+book.rating,0)/rated.length : 0;
+      get("average").textContent = average.toFixed(1).replace(".",",");
+      render();
+    } catch (error) {
+      console.error(error);
+      get("books").insertAdjacentHTML("beforeend", '<div class="empty"><strong>Não foi possível carregar o catálogo.</strong>Atualize a página ou tente novamente mais tarde.</div>');
+    }
+  }
 
-  try { render(); } catch (error) { console.error("Erro ao montar o catálogo:", error); }
+  ["search","sort","filter"].forEach(id => get(id).addEventListener(id === "search" ? "input" : "change", render));
+  loadCatalog();
 })();
 </script>
 </body>
