@@ -136,7 +136,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
       const reviewLabel = book.reviewComplete ? "Ler minha resenha" : "Ver registro parcial da resenha";
       const originalBlock = book.originalReview
         ? '<details class="original-review"><summary>Ver meu texto original</summary>' +
-          book.originalReview.split("\\n\\n").map(p => '<p class="review-text">' + p + '</p>').join("") +
+          book.originalReview.split("\n\n").map(p => '<p class="review-text">' + p + '</p>').join("") +
           '</details>'
         : '';
       return '<article class="book"><div class="cover"><img class="cover-image" src="' +
@@ -146,7 +146,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
         '</h3><div class="author">' + book.author + '</div><div class="book-meta">' + meta +
         '</div><div class="rating">★ ' + rating + '/10' + recommendation + '</div><span class="tag">' +
         book.status + '</span><details class="review-details"><summary>' + reviewLabel + '</summary>' +
-        book.review.split("\\n\\n").map(p => '<p class="review-text">' + p + '</p>').join("") +
+        book.review.split("\n\n").map(p => '<p class="review-text">' + p + '</p>').join("") +
         originalBlock + '</details></div></article>';
     }).join("");
   }
