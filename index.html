@@ -62,7 +62,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
     <h3 class="book-title">O Peso da Glória</h3>
     <div class="author">C. S. Lewis</div>
     <div class="book-meta">
-      <span>192 páginas · Primeira publicação: 1949</span>
+      <span>192 páginas · Publicado em 2017</span>
       <span>Edição brasileira cadastrada: 2017</span>
       <span>Ano da leitura: não informado</span>
     </div>
@@ -91,7 +91,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
       status: "Avaliado",
       cover: "https://acdn-us.mitiendanube.com/stores/002/101/838/products/1173001146-o-peso-da-gloria-livro-c-s-lewis-editora-thomas-nelson-sku-45888-capa-lateral-jpg-e85a3bb7ea798ee8ed16757114816855-1024-1024.webp",
       pages: 192,
-      publicationYear: 1949,
+      publicationYear: 2017,
       editionYear: 2017,
       readYear: null,
       editionIsbn: "9788578600655",
@@ -139,7 +139,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
       const reviewLabel = book.reviewComplete ? "Ler minha resenha" : "Ver registro parcial da resenha";
       const reviewNotice = book.reviewComplete ? "" : '<small class="review-pending">Este é apenas o trecho preservado no registro atual. A resenha integral será inserida a partir do texto original.</small>';
       return '<article class="book"><div class="cover"><img class="cover-image" src="' +
-        book.cover + '" alt="Capa de ' + book.title + '" loading="lazy" onerror="this.style.display=\\'none\\';this.nextElementSibling.style.display=\\'flex\\'">' +
+        book.cover + '" alt="Capa de ' + book.title + '" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.nextElementSibling.style.display=&quot;flex&quot;">' +
         '<div class="cover-fallback"><strong>' + book.title + '</strong><span>' + book.author.toUpperCase() +
         '</span></div></div><div class="book-info"><h3 class="book-title">' + book.title +
         '</h3><div class="author">' + book.author + '</div><div class="book-meta">' + meta +
