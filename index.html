@@ -118,7 +118,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
       const rating = Number(book.rating).toFixed(1).replace(".", ",");
       const recommendation = book.recommend ? " · Recomendaria" : "";
       return '<article class="book"><div class="cover"><img class="cover-image" src="' +
-        book.cover + '" alt="Capa de ' + book.title + '" loading="lazy" onerror="this.style.display=\\'none\\';this.nextElementSibling.style.display=\\'flex\\'">' +
+        book.cover + '" alt="Capa de ' + book.title + '" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.nextElementSibling.style.display=&quot;flex&quot;">' +
         '<div class="cover-fallback"><strong>' + book.title + '</strong><span>' + book.author.toUpperCase() +
         '</span></div></div><div class="book-info"><h3 class="book-title">' + book.title +
         '</h3><div class="author">' + book.author + '</div><div class="rating">★ ' +
