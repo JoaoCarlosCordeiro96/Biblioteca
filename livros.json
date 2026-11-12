@@ -16,7 +16,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "O Guia do Mochileiro das Galáxias",
       "volumeNumber": 1,
@@ -45,7 +48,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "O Guia do Mochileiro das Galáxias",
       "volumeNumber": 2,
@@ -74,7 +80,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "O Guia do Mochileiro das Galáxias",
       "volumeNumber": 3,
@@ -103,7 +112,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "O Guia do Mochileiro das Galáxias",
       "volumeNumber": 4,
@@ -132,7 +144,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "O Guia do Mochileiro das Galáxias",
       "volumeNumber": 5,
@@ -161,7 +176,9 @@
       "editionReference": "Edição brasileira HarperCollins, 2020; ISBN 9786555110135.",
       "pages": 334,
       "isbn": "9786555110135",
-      "genre": [],
+      "genre": [
+        "Mistério"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -191,7 +208,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -220,7 +239,11 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Mistério",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -249,7 +272,10 @@
       "editionReference": "2ª edição brasileira, 2021; tradução de Marcelo Mendes; ISBN 9786555651034.",
       "pages": 528,
       "isbn": "9786555651034",
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Mistério"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -279,7 +305,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -308,7 +337,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Filhos do Éden",
       "volumeNumber": 1,
@@ -337,7 +369,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Filhos do Éden",
       "volumeNumber": 2,
@@ -366,7 +401,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Filhos do Éden",
       "volumeNumber": 3,
@@ -395,7 +433,11 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Mistério",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -424,7 +466,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura"
+      ],
       "themes": [],
       "series": "As Crônicas de Artur",
       "volumeNumber": 1,
@@ -453,7 +497,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura"
+      ],
       "themes": [],
       "series": "As Crônicas de Artur",
       "volumeNumber": 2,
@@ -482,7 +528,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura"
+      ],
       "themes": [],
       "series": "As Crônicas de Artur",
       "volumeNumber": 3,
@@ -511,7 +559,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -540,7 +590,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -569,7 +622,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -598,7 +653,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -627,7 +685,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -656,7 +717,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -685,7 +749,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -714,7 +780,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -743,7 +812,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -835,7 +906,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Mistério"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -864,7 +937,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Mistério"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -893,7 +968,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Mistério"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -922,7 +999,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Mistério"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -951,7 +1030,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Mistério"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -980,7 +1061,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Mistério"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1009,7 +1092,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Mistério"
+      ],
       "themes": [],
       "series": "Sherlock Holmes",
       "volumeNumber": null,
@@ -1038,7 +1124,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Mistério"
+      ],
       "themes": [],
       "series": "Sherlock Holmes",
       "volumeNumber": null,
@@ -1067,7 +1156,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Mistério"
+      ],
       "themes": [],
       "series": "Sherlock Holmes",
       "volumeNumber": null,
@@ -1096,7 +1188,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Mistério"
+      ],
       "themes": [],
       "series": "Sherlock Holmes",
       "volumeNumber": null,
@@ -1154,7 +1249,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1183,7 +1280,9 @@
       "editionReference": "Edição da infância (capa enviada pelo leitor; ano não identificado)",
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1212,7 +1311,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "Fundação",
       "volumeNumber": 1,
@@ -1241,7 +1342,9 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1270,7 +1373,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "Duna",
       "volumeNumber": 1,
@@ -1299,7 +1405,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Harry Potter",
       "volumeNumber": 1,
@@ -1328,7 +1437,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Harry Potter",
       "volumeNumber": 2,
@@ -1357,7 +1469,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Harry Potter",
       "volumeNumber": 3,
@@ -1386,7 +1501,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Harry Potter",
       "volumeNumber": 4,
@@ -1415,7 +1533,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Harry Potter",
       "volumeNumber": 5,
@@ -1444,7 +1565,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Harry Potter",
       "volumeNumber": 6,
@@ -1473,7 +1597,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "Harry Potter",
       "volumeNumber": 7,
@@ -1502,7 +1629,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1531,7 +1661,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1561,7 +1694,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1591,7 +1727,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1620,7 +1759,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "A Lenda de Ruff Ghanor",
       "volumeNumber": 1,
@@ -1649,7 +1791,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "A Lenda de Ruff Ghanor",
       "volumeNumber": 2,
@@ -1678,7 +1823,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": "A Lenda de Ruff Ghanor",
       "volumeNumber": 3,
@@ -1707,7 +1855,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1737,7 +1888,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1766,7 +1920,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "Jogos Vorazes",
       "volumeNumber": 1,
@@ -1795,7 +1952,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "Jogos Vorazes",
       "volumeNumber": 2,
@@ -1824,7 +1984,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "Jogos Vorazes",
       "volumeNumber": 3,
@@ -1853,7 +2016,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1882,7 +2048,10 @@
       "editionReference": "Edição brasileira Jambô, 2007; ISBN 9788589134248.",
       "pages": 512,
       "isbn": "9788589134248",
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Fantasia"
+      ],
       "themes": [],
       "series": null,
       "volumeNumber": null,
@@ -1912,7 +2081,10 @@
       "editionReference": null,
       "pages": null,
       "isbn": null,
-      "genre": [],
+      "genre": [
+        "Aventura",
+        "Sci-Fi"
+      ],
       "themes": [],
       "series": "Duna",
       "volumeNumber": 2,
