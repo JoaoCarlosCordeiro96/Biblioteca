@@ -987,8 +987,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://harpercollins.com.br/cdn/shop/files/9786555114706_vi_03_648143cd-1c42-48f9-b9d5-b85d05ceefe9.png?v=1710968124",
+      "status": "lido",
+      "coverSource": "https://harpercollins.com.br/products/o-cao-da-morte-agatha-christie",
+      "coverEditionReference": "HarperCollins Brasil, edição de 2023, ISBN 9786555114706; capa oficial da editora. É uma edição diferente da L&PM Pocket."
     },
     {
       "id": "035",
@@ -1014,8 +1016,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m5lr4lx356c015",
+      "status": "lido",
+      "coverSource": "https://shopee.com.br/Livro-O-C%C3%A3o-Dos-Baskerville-Edi%C3%A7%C3%A3o-Bolso-de-Luxo-i.324589650.22393677697",
+      "coverEditionReference": "Edição brasileira Zahar, capa dura de bolso; ISBN/ano não confirmados no anúncio."
     },
     {
       "id": "036",
@@ -1041,8 +1045,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://down-br.img.susercontent.com/file/a5eb009272112bbdcb68fbd23f00cb49",
+      "status": "lido",
+      "coverSource": "https://shopee.com.br/Sherlock-Holmes-Um-Estudo-em-Vermelho-Capa-Especial-i.482840775.19938551869",
+      "coverEditionReference": "Edição brasileira Garnier, capa especial; ISBN/ano não confirmados no anúncio."
     },
     {
       "id": "037",
@@ -1068,8 +1074,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://blulivro.cdn.magazord.com.br/img/2022/07/produto/12052/55454551g.jpg?ims=fit-in%2F450x450%2Ffilters%3Afill%28white%29",
+      "status": "lido",
+      "coverSource": "https://www.blulivro.com.br/signo-dos-quatro-o-L55454551A",
+      "coverEditionReference": "Edição brasileira Martin Claret; ISBN/ano não confirmados na página da imagem."
     },
     {
       "id": "038",
@@ -1095,8 +1103,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://down-br.img.susercontent.com/file/sg-11134201-22090-w07u5462qwhvdf",
+      "status": "lido",
+      "coverSource": "https://shopee.com.br/Livro-As-Aventuras-de-Sherlock-Holmes-Arthur-Conan-Doyle-capa-dura-i.348368976.20849449792",
+      "coverEditionReference": "Edição brasileira Zahar, capa dura de bolso; ISBN/ano não confirmados no anúncio."
     },
     {
       "id": "039",
@@ -1122,8 +1132,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://cdn.dlojavirtual.com/static1/93249/sku/livros-revistas-e-gibis-livro-a-revolucao-dos-bichos-2007-george-orwell-editora-companhia-das-letras-p-1708204957865.jpg",
+      "status": "lido",
+      "coverSource": "https://www.discosdevinil.com.br/livros-revistas-e-gibis/livro-a-revolucao-dos-bichos-2007-george-orwell-editora-companhia-das-letras-p",
+      "coverEditionReference": "Companhia das Letras, edição brasileira de 2007; capa localizada em catálogo de revenda."
     },
     {
       "id": "040",
@@ -1149,8 +1161,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": "O usuário declarou: “é a melhor coisa que já li na vida”. Leu várias vezes.",
-      "cover": null,
-      "status": "lido"
+      "cover": "https://plenitudedistribuidora.com.br/cdn/shop/files/285767-1.jpg?v=1772114400",
+      "status": "lido",
+      "coverSource": "https://plenitudedistribuidora.com.br/products/1984-george-orwell-companhia-das-letras",
+      "coverEditionReference": "Companhia das Letras, edição brasileira; capa localizada em catálogo de distribuidora. ISBN/ano exatos não confirmados."
     },
     {
       "id": "041",
@@ -1203,8 +1217,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://aleph.com.br/cdn/shop/files/Alp_13Fundacao_1Cadastro3_eca7c1a2-5b00-412a-bb82-92b758abdbcb.png?v=1714169773&width=1445",
+      "status": "lido",
+      "coverSource": "https://aleph.com.br/products/fundacao",
+      "coverEditionReference": "Editora Aleph, edição brasileira lançada em 04/09/2020; ISBN 9788576574835. Capa oficial da editora."
     },
     {
       "id": "043",
@@ -1230,8 +1246,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://aleph.com.br/cdn/shop/files/Cadastro_OFimDaEternindade_1.png?v=1688412310",
+      "status": "lido",
+      "coverSource": "https://aleph.com.br/products/o-fim-da-eternidade",
+      "coverEditionReference": "Editora Aleph, edição brasileira lançada em 10/09/2019; ISBN 9788576574224. Capa oficial da editora."
     },
     {
       "id": "044",
@@ -1257,8 +1275,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://aleph.com.br/cdn/shop/files/Alp_5Cadastro_7Duna5.png?v=1713784200&width=1445",
+      "status": "lido",
+      "coverSource": "https://aleph.com.br/products/duna-1",
+      "coverEditionReference": "Editora Aleph, edição brasileira lançada em 28/04/2017; ISBN 9788576573135. Capa oficial da editora."
     },
     {
       "id": "045",
