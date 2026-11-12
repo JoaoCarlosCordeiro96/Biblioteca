@@ -2099,6 +2099,42 @@
       "status": "lido",
       "coverSource": "https://aleph.com.br/products/messias-de-duna",
       "coverEditionReference": "Editora Aleph, edição brasileira em capa dura, tradução de Maria do Carmo Zanini; 272 páginas. Capa oficial da editora."
+    },
+    {
+      "id": "067",
+      "title": "O Buraco da Agulha",
+      "author": "Ken Follett",
+      "originalTitle": "Eye of the Needle",
+      "publicationYear": 1978,
+      "country": "Reino Unido",
+      "originalLanguage": "Inglês",
+      "publisher": "Editora Arqueiro",
+      "editionYear": 2018,
+      "editionReference": "Edição brasileira comemorativa de 40 anos, Editora Arqueiro, capa dura, tradução de Alves Calado. Edição de referência; o exemplar efetivamente lido em 2021 não foi confirmado.",
+      "pages": 336,
+      "isbn": "978-85-8041-881-1",
+      "genre": [
+        "Suspense",
+        "Ficção Histórica"
+      ],
+      "themes": [
+        "Espionagem",
+        "Segunda Guerra Mundial",
+        "Dia D"
+      ],
+      "series": null,
+      "volumeNumber": null,
+      "readYear": 2021,
+      "readCount": 1,
+      "rating": 6.5,
+      "recommend": false,
+      "evaluationScope": "individual",
+      "review": null,
+      "personalNotes": null,
+      "cover": "https://new.editoraarqueiro.com.br/wp-content/uploads/2024/03/9788580418811.jpg",
+      "status": "lido",
+      "coverSource": "https://new.editoraarqueiro.com.br/livro/o-buraco-da-agulha/",
+      "coverEditionReference": "Capa da edição brasileira comemorativa de 40 anos da Editora Arqueiro, lançada em 09/03/2018; 336 páginas, capa dura, ISBN 978-85-8041-881-1. A edição do exemplar lido não foi confirmada."
     }
   ]
 }
