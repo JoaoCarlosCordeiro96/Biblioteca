@@ -27,7 +27,7 @@ h1 em{color:var(--gold);font-style:normal}
 .section-head{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:25px}
 h2{font-size:28px;font-weight:400;margin:0}
 .count{font:12px Arial,sans-serif;color:var(--muted)}
-.toolbar{display:grid;grid-template-columns:minmax(220px,1fr) 190px 190px;gap:10px;margin:24px 0}
+.toolbar{display:grid;grid-template-columns:minmax(220px,1fr) 175px 175px 175px;gap:10px;margin:24px 0}
 input,select{background:var(--panel);border:1px solid var(--line);border-radius:3px;color:var(--ink);padding:13px 14px;min-width:0}
 input::placeholder{color:#817d76}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
@@ -45,6 +45,13 @@ input::placeholder{color:#817d76}
 .rating{margin-top:14px;font:12px Arial,sans-serif;color:var(--gold2)}
 .rating-unrated{color:#89847a}
 .tag{display:inline-block;border:1px solid #6b593d;color:var(--gold2);font:9px Arial,sans-serif;letter-spacing:1px;padding:5px 7px;text-transform:uppercase;margin-top:10px}
+.genre-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.genre-tag{display:inline-block;border:1px solid #4a4b50;border-radius:20px;padding:5px 8px;color:#d8c8ad;background:#202127;font:10px Arial,sans-serif;letter-spacing:.2px}
+#backToTop{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border:1px solid #8c744f;border-radius:50%;background:var(--gold);color:#17181d;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px #0008;cursor:pointer;z-index:20;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,visibility .2s,transform .2s}
+#backToTop.visible{opacity:1;visibility:visible;transform:translateY(0)}
+#backToTop:hover{background:var(--gold2)}
+#backToTop svg{width:21px;height:21px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#backToTop{transition:none}}
 .review-details{border-top:1px solid var(--line);margin-top:14px;padding-top:11px}
 .review-details summary{cursor:pointer;color:var(--gold2);font:11px Arial,sans-serif;letter-spacing:.5px;list-style:none}
 .review-details summary::-webkit-details-marker{display:none}
@@ -96,6 +103,13 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
         <option value="rated">Avaliados</option>
         <option value="unrated">Ainda sem avaliação</option>
       </select>
+      <select id="styleFilter" aria-label="Filtrar por estilo">
+        <option value="all">Todos os estilos</option>
+        <option value="Aventura">Aventura</option>
+        <option value="Mistério">Mistério</option>
+        <option value="Fantasia">Fantasia</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+      </select>
     </div>
     <div class="grid" id="books" aria-live="polite">
       <article class="book">
@@ -121,6 +135,9 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
   <div class="note">As notas e resenhas são avaliações pessoais do leitor. Dados bibliográficos que ainda não foram confirmados serão preenchidos após pesquisa ou confirmação da edição.</div>
 </main>
 <footer>BIBLIOTECA DO JOÃO · UMA VIDA DE LEITURAS</footer>
+<button id="backToTop" type="button" aria-label="Voltar ao topo" title="Voltar ao topo">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
+</button>
 <script>
 (function () {
   let books = [];
@@ -137,6 +154,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
     const container = get("books");
     const query = normalize(get("search").value.trim());
     const filter = get("filter").value;
+    const styleFilter = get("styleFilter").value;
     const sort = get("sort").value;
 
     let shown = books.filter(book => {
@@ -149,7 +167,9 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
         (filter === "notRecommended" && book.recommend === false) ||
         (filter === "rated" && rated) ||
         (filter === "unrated" && !rated);
-      return matchesQuery && matchesFilter;
+      const genres = Array.isArray(book.genre) ? book.genre : [];
+      const matchesStyle = styleFilter === "all" || genres.includes(styleFilter);
+      return matchesQuery && matchesFilter && matchesStyle;
     });
 
     shown.sort((a,b) => {
@@ -177,6 +197,9 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
       if (book.editionYear) metaItems.push("Edição: " + book.editionYear);
       if (book.readYear) metaItems.push("Leitura: " + book.readYear);
       const meta = metaItems.length ? '<div class="book-meta">' + metaItems.map(x=>'<span>'+escapeHtml(x)+'</span>').join("") + '</div>' : "";
+      const genreTags = Array.isArray(book.genre) && book.genre.length
+        ? '<div class="genre-tags" aria-label="Estilos do livro">' + book.genre.map(g => '<span class="genre-tag">' + escapeHtml(g) + '</span>').join("") + '</div>'
+        : "";
       const rating = typeof book.rating === "number"
         ? '<div class="rating">★ ' + book.rating.toFixed(1).replace(".",",") + '/10 · ' + (book.recommend ? "Recomendaria" : "Não recomendaria") + '</div>'
         : '<div class="rating rating-unrated">Sem avaliação registrada</div>';
@@ -186,7 +209,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
       const review = book.review
         ? '<details class="review-details"><summary>Ler minha resenha</summary>' + book.review.split("\n\n").map(p=>'<p class="review-text">'+escapeHtml(p)+'</p>').join("") + '</details>'
         : '';
-      return '<article class="book"><div class="cover">' + cover + missingCover + '</div><div class="book-info"><h3 class="book-title">' + title + '</h3><div class="author">' + author + '</div>' + meta + rating + groupLabel + review + '</div></article>';
+      return '<article class="book"><div class="cover">' + cover + missingCover + '</div><div class="book-info"><h3 class="book-title">' + title + '</h3><div class="author">' + author + '</div>' + meta + genreTags + rating + groupLabel + review + '</div></article>';
     }).join("");
   }
 
@@ -209,7 +232,12 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
     }
   }
 
-  ["search","sort","filter"].forEach(id => get(id).addEventListener(id === "search" ? "input" : "change", render));
+  ["search","sort","filter","styleFilter"].forEach(id => get(id).addEventListener(id === "search" ? "input" : "change", render));
+  const backToTop = get("backToTop");
+  function updateBackToTop() { backToTop.classList.toggle("visible", window.scrollY > 420); }
+  window.addEventListener("scroll", updateBackToTop, {passive:true});
+  backToTop.addEventListener("click", () => window.scrollTo({top:0,behavior:"smooth"}));
+  updateBackToTop();
   loadCatalog();
 })();
 </script>
