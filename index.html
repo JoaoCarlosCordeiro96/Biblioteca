@@ -27,7 +27,7 @@ h1 em{color:var(--gold);font-style:normal}
 .section-head{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:25px}
 h2{font-size:28px;font-weight:400;margin:0}
 .count{font:12px Arial,sans-serif;color:var(--muted)}
-.toolbar{display:grid;grid-template-columns:minmax(220px,1fr) 175px 175px 175px;gap:10px;margin:24px 0}
+.toolbar{display:grid;grid-template-columns:minmax(220px,1fr) repeat(4,minmax(135px,1fr));gap:10px;margin:24px 0}
 input,select{background:var(--panel);border:1px solid var(--line);border-radius:3px;color:var(--ink);padding:13px 14px;min-width:0}
 input::placeholder{color:#817d76}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
@@ -63,6 +63,10 @@ input::placeholder{color:#817d76}
 .note{border-left:2px solid var(--gold);padding:15px 18px;color:var(--muted);font:13px/1.7 Arial,sans-serif;margin-top:35px;max-width:740px}
 footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77736d;font:10px Arial,sans-serif;letter-spacing:1.5px}
 @media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1000px){
+  .toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .toolbar #search{grid-column:1/-1}
+}
 @media(max-width:620px){
   main{padding-top:48px}
   .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -91,6 +95,9 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
     <div class="section-head"><h2>Minha coleção</h2><span class="count" id="count">66 títulos</span></div>
     <div class="toolbar">
       <input id="search" type="search" placeholder="Buscar por título ou autor..." aria-label="Buscar livros">
+      <select id="authorFilter" aria-label="Filtrar por autor">
+        <option value="all">Todos os autores</option>
+      </select>
       <select id="sort" aria-label="Ordenar livros">
         <option value="title">Ordem alfabética</option>
         <option value="rating">Melhor nota</option>
@@ -103,12 +110,8 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
         <option value="rated">Avaliados</option>
         <option value="unrated">Ainda sem avaliação</option>
       </select>
-      <select id="styleFilter" aria-label="Filtrar por estilo">
-        <option value="all">Todos os estilos</option>
-        <option value="Aventura">Aventura</option>
-        <option value="Mistério">Mistério</option>
-        <option value="Fantasia">Fantasia</option>
-        <option value="Sci-Fi">Sci-Fi</option>
+      <select id="styleFilter" aria-label="Filtrar por categoria">
+        <option value="all">Todas as categorias</option>
       </select>
     </div>
     <div class="grid" id="books" aria-live="polite">
@@ -155,6 +158,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
     const query = normalize(get("search").value.trim());
     const filter = get("filter").value;
     const styleFilter = get("styleFilter").value;
+    const authorFilter = get("authorFilter").value;
     const sort = get("sort").value;
 
     let shown = books.filter(book => {
@@ -169,7 +173,8 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
         (filter === "unrated" && !rated);
       const genres = Array.isArray(book.genre) ? book.genre : [];
       const matchesStyle = styleFilter === "all" || genres.includes(styleFilter);
-      return matchesQuery && matchesFilter && matchesStyle;
+      const matchesAuthor = authorFilter === "all" || book.author === authorFilter;
+      return matchesQuery && matchesFilter && matchesStyle && matchesAuthor;
     });
 
     shown.sort((a,b) => {
@@ -213,6 +218,32 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
     }).join("");
   }
 
+  function populateFilters() {
+    const currentStyle = get("styleFilter").value || "all";
+    const currentAuthor = get("authorFilter").value || "all";
+
+    const categories = [...new Set(
+      books.flatMap(book => Array.isArray(book.genre) ? book.genre : [])
+        .filter(value => typeof value === "string" && value.trim())
+    )].sort((a,b) => a.localeCompare(b,"pt-BR"));
+
+    const authors = [...new Set(
+      books.map(book => book.author)
+        .filter(value => typeof value === "string" && value.trim())
+    )].sort((a,b) => a.localeCompare(b,"pt-BR"));
+
+    get("styleFilter").innerHTML =
+      '<option value="all">Todas as categorias</option>' +
+      categories.map(category => '<option value="' + escapeHtml(category) + '">' + escapeHtml(category) + '</option>').join("");
+
+    get("authorFilter").innerHTML =
+      '<option value="all">Todos os autores</option>' +
+      authors.map(author => '<option value="' + escapeHtml(author) + '">' + escapeHtml(author) + '</option>').join("");
+
+    if (categories.includes(currentStyle)) get("styleFilter").value = currentStyle;
+    if (authors.includes(currentAuthor)) get("authorFilter").value = currentAuthor;
+  }
+
   async function loadCatalog() {
     try {
       const response = await fetch("./livros.json", {cache:"no-store"});
@@ -220,6 +251,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
       const data = await response.json();
       if (!data || !Array.isArray(data.records)) throw new Error("Formato inválido no catálogo.");
       books = data.records;
+      populateFilters();
       const rated = books.filter(book => typeof book.rating === "number");
       get("total").textContent = books.length;
       get("rated").textContent = rated.length;
@@ -232,7 +264,7 @@ footer{border-top:1px solid var(--line);padding:25px;text-align:center;color:#77
     }
   }
 
-  ["search","sort","filter","styleFilter"].forEach(id => get(id).addEventListener(id === "search" ? "input" : "change", render));
+  ["search","sort","filter","styleFilter","authorFilter"].forEach(id => get(id).addEventListener(id === "search" ? "input" : "change", render));
   const backToTop = get("backToTop");
   function updateBackToTop() { backToTop.classList.toggle("visible", window.scrollY > 420); }
   window.addEventListener("scroll", updateBackToTop, {passive:true});
