@@ -10,10 +10,10 @@
 :root{--bg:#120c08;--panel:#21160f;--line:#543a24;--line-soft:#3d2b1d;--ink:#f4ead5;--muted:#b9a78d;--gold:#d9aa61;--gold-bright:#f0cd8c;--gold-dark:#91662f;--shadow:0 18px 45px rgba(0,0,0,.28)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:110px}
-body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 50% -20%,rgba(132,83,37,.24),transparent 48%),linear-gradient(180deg,#17100b 0%,var(--bg) 46%,#100a07 100%);font-family:Georgia,"Times New Roman",serif}
+body{margin:0;color:var(--ink);background-color:var(--bg);background-image:linear-gradient(180deg,rgba(16,9,5,.84),rgba(16,9,5,.92) 42%,rgba(16,9,5,.97)),url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Historical_library_of_the_Apponyi_genus_located_in_Oponice.jpg/1280px-Historical_library_of_the_Apponyi_genus_located_in_Oponice.jpg");background-size:cover;background-position:center 22%;background-attachment:fixed;background-repeat:no-repeat;font-family:Georgia,"Times New Roman",serif}
 a{color:inherit}
-.site-header{position:sticky;top:0;z-index:10;overflow:hidden;border-bottom:1px solid rgba(217,170,97,.42);background:linear-gradient(90deg,rgba(13,8,5,.96),rgba(31,18,10,.93) 52%,rgba(13,8,5,.97)),repeating-linear-gradient(0deg,transparent 0 39px,rgba(211,162,91,.08) 40px 42px);box-shadow:0 8px 24px rgba(0,0,0,.25);backdrop-filter:blur(14px)}
-.site-header:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background:repeating-linear-gradient(90deg,transparent 0 118px,rgba(215,173,111,.13) 119px 121px,transparent 122px 240px)}
+.site-header{position:sticky;top:0;z-index:10;overflow:hidden;border-bottom:1px solid rgba(217,170,97,.52);background:linear-gradient(90deg,rgba(13,8,5,.58),rgba(31,18,10,.36) 52%,rgba(13,8,5,.62)),url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Historical_library_of_the_Apponyi_genus_located_in_Oponice.jpg/1280px-Historical_library_of_the_Apponyi_genus_located_in_Oponice.jpg");background-size:cover;background-position:center 38%;box-shadow:0 8px 24px rgba(0,0,0,.3);backdrop-filter:blur(2px)}
+.site-header:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background:linear-gradient(180deg,rgba(10,6,3,.04),rgba(10,6,3,.34)),repeating-linear-gradient(90deg,transparent 0 118px,rgba(215,173,111,.13) 119px 121px,transparent 122px 240px)}
 .header-inner{position:relative;max-width:1320px;margin:auto;min-height:104px;padding:15px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 .brand{display:flex;align-items:center;gap:19px;text-decoration:none;min-width:0}
 .brand-mark{width:68px;height:58px;color:var(--gold);flex:none}
@@ -93,7 +93,10 @@ select{cursor:pointer}
 .empty strong{display:block;font:24px Georgia,serif;color:var(--gold-bright);margin-bottom:8px}
 .note{border-left:2px solid var(--gold);padding:14px 18px;color:#aa9a83;font:12px/1.75 Arial,sans-serif;margin-top:38px;max-width:780px}
 
-footer{border-top:1px solid var(--line);padding:26px;text-align:center;background:rgba(8,6,4,.35);color:#83745f;font:9px Arial,sans-serif;letter-spacing:2px}
+footer{border-top:1px solid var(--line);padding:26px;text-align:center;background:rgba(8,6,4,.62);color:#83745f;font:9px Arial,sans-serif;letter-spacing:2px}
+.photo-credit{display:block;margin-top:9px;color:#9b896e;font:10px/1.5 Arial,sans-serif;letter-spacing:.15px}
+.photo-credit a{color:#d2b17c;text-decoration:none}
+.photo-credit a:hover{text-decoration:underline}
 #backToTop{position:fixed;right:25px;bottom:25px;width:50px;height:50px;border:1px solid #b88743;border-radius:50%;background:linear-gradient(145deg,#edc477,#b77c36);color:#1c1209;display:flex;align-items:center;justify-content:center;box-shadow:0 9px 25px rgba(0,0,0,.45);cursor:pointer;z-index:20;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,visibility .2s,transform .2s}
 #backToTop.visible{opacity:1;visibility:visible;transform:translateY(0)}
 #backToTop:hover{filter:brightness(1.1)}
@@ -142,7 +145,7 @@ footer{border-top:1px solid var(--line);padding:26px;text-align:center;backgroun
   </section>
   <div class="note" id="about">As notas e resenhas são avaliações pessoais do leitor. Os dados bibliográficos e as edições de referência são identificados sempre que possível; informações ainda não confirmadas serão atualizadas conforme a pesquisa avançar.</div>
 </main>
-<footer>LEITOR CASUAL · UMA VIDA DE LEITURAS</footer>
+<footer>LEITOR CASUAL · UMA VIDA DE LEITURAS<span class="photo-credit">Fotografia: Slovak National Library · <a href="https://commons.wikimedia.org/wiki/File:Historical_library_of_the_Apponyi_genus_located_in_Oponice.jpg" target="_blank" rel="noopener noreferrer">Biblioteca histórica Apponyi, Oponice</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. Enquadramento e sobreposição escura adaptados.</span></footer>
 <button id="backToTop" type="button" aria-label="Voltar ao topo" title="Voltar ao topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg></button>
 <script>
 (function () {
