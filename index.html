@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Biblioteca pessoal de João Carlos: livros lidos, avaliações e resenhas.">
+<meta name="description" content="Leitor Casual: catálogo de livros lidos, avaliações e resenhas.">
 <meta name="theme-color" content="#140d08">
-<title>Biblioteca do João — Livros que ficam</title>
+<title>Leitor Casual — Minha biblioteca de leituras</title>
 <style>
-:root{--bg:#120c08;--panel:#21160f;--line:#543a24;--line-soft:#3d2b1d;--ink:#f4ead5;--muted:#b9a78d;--gold:#d9aa61;--gold-bright:#f0cd8c;--gold-dark:#91662f;--shadow:0 18px 45px rgba(0,0,0,.28)}
+:root{--library-image:url("https://images.pexels.com/photos/33750808/pexels-photo-33750808/free-photo-of-cozy-library-interior-with-wooden-balconies.jpeg?auto=compress&cs=tinysrgb&w=1920");--bg:#120c08;--panel:#21160f;--line:#543a24;--line-soft:#3d2b1d;--ink:#f4ead5;--muted:#b9a78d;--gold:#d9aa61;--gold-bright:#f0cd8c;--gold-dark:#91662f;--shadow:0 18px 45px rgba(0,0,0,.28)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:110px}
-body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 50% -20%,rgba(132,83,37,.24),transparent 48%),linear-gradient(180deg,#17100b 0%,var(--bg) 46%,#100a07 100%);font-family:Georgia,"Times New Roman",serif}
+body{margin:0;color:var(--ink);background-color:var(--bg);background-image:linear-gradient(180deg,rgba(16,9,5,.86),rgba(16,9,5,.94)),radial-gradient(ellipse at 50% -20%,rgba(132,83,37,.19),transparent 48%),var(--library-image);background-size:cover,cover,cover;background-position:center,center,center 22%;background-attachment:scroll,scroll,fixed;background-repeat:no-repeat;font-family:Georgia,"Times New Roman",serif}
 a{color:inherit}
-.site-header{position:sticky;top:0;z-index:10;overflow:hidden;border-bottom:1px solid rgba(217,170,97,.42);background:linear-gradient(90deg,rgba(13,8,5,.96),rgba(31,18,10,.93) 52%,rgba(13,8,5,.97)),repeating-linear-gradient(0deg,transparent 0 39px,rgba(211,162,91,.08) 40px 42px);box-shadow:0 8px 24px rgba(0,0,0,.25);backdrop-filter:blur(14px)}
-.site-header:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background:repeating-linear-gradient(90deg,transparent 0 118px,rgba(215,173,111,.13) 119px 121px,transparent 122px 240px)}
+.site-header{position:sticky;top:0;z-index:10;overflow:hidden;border-bottom:1px solid rgba(217,170,97,.48);background:linear-gradient(90deg,rgba(13,8,5,.78),rgba(31,18,10,.48) 52%,rgba(13,8,5,.76)),var(--library-image);background-size:cover;background-position:center 43%;box-shadow:0 8px 24px rgba(0,0,0,.3);backdrop-filter:blur(2px)}
+.site-header:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;background:linear-gradient(180deg,rgba(12,7,4,.1),rgba(12,7,4,.35)),repeating-linear-gradient(90deg,transparent 0 118px,rgba(215,173,111,.13) 119px 121px,transparent 122px 240px)}
 .header-inner{position:relative;max-width:1320px;margin:auto;min-height:104px;padding:15px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 .brand{display:flex;align-items:center;gap:19px;text-decoration:none;min-width:0}
 .brand-mark{width:68px;height:58px;color:var(--gold);flex:none}
@@ -92,6 +92,9 @@ select{cursor:pointer}
 .empty{grid-column:1/-1;border:1px dashed #725333;border-radius:12px;padding:44px 20px;text-align:center;color:var(--muted);font:13px/1.7 Arial,sans-serif}
 .empty strong{display:block;font:24px Georgia,serif;color:var(--gold-bright);margin-bottom:8px}
 .note{border-left:2px solid var(--gold);padding:14px 18px;color:#aa9a83;font:12px/1.75 Arial,sans-serif;margin-top:38px;max-width:780px}
+.photo-credit{display:block;margin-top:9px;color:#8d7b63;font:10px/1.5 Arial,sans-serif;letter-spacing:.2px}
+.photo-credit a{color:#c9a66e;text-decoration:none}
+.photo-credit a:hover{text-decoration:underline}
 footer{border-top:1px solid var(--line);padding:26px;text-align:center;background:rgba(8,6,4,.35);color:#83745f;font:9px Arial,sans-serif;letter-spacing:2px}
 #backToTop{position:fixed;right:25px;bottom:25px;width:50px;height:50px;border:1px solid #b88743;border-radius:50%;background:linear-gradient(145deg,#edc477,#b77c36);color:#1c1209;display:flex;align-items:center;justify-content:center;box-shadow:0 9px 25px rgba(0,0,0,.45);cursor:pointer;z-index:20;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,visibility .2s,transform .2s}
 #backToTop.visible{opacity:1;visibility:visible;transform:translateY(0)}
@@ -106,9 +109,9 @@ footer{border-top:1px solid var(--line);padding:26px;text-align:center;backgroun
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="#top" aria-label="Biblioteca do João — início">
+    <a class="brand" href="#top" aria-label="Leitor Casual — início">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 72 60"><path d="M36 14C25 5 13 5 4 9v39c11-4 22-3 32 6V14Z"/><path d="M36 14c11-9 23-9 32-5v39c-11-4-22-3-32 6V14Z"/><path d="M36 14v40M10 17c8-2 15-1 21 3M10 25c8-2 15-1 21 3M62 17c-8-2-15-1-21 3M62 25c-8-2-15-1-21 3"/></svg></span>
-      <span class="brand-copy"><strong>Biblioteca do João</strong><small>Meus 66 livros lidos</small></span>
+      <span class="brand-copy"><strong>LEITOR CASUAL</strong><small>MINHA BIBLIOTECA DE LEITURAS</small></span>
     </a>
     <nav class="site-nav" aria-label="Navegação principal"><a href="#collection">▤&nbsp; Livros</a><a href="#stats">▥&nbsp; Estatísticas</a><a href="#about">ⓘ&nbsp; Sobre</a></nav>
   </div>
@@ -141,7 +144,7 @@ footer{border-top:1px solid var(--line);padding:26px;text-align:center;backgroun
   </section>
   <div class="note" id="about">As notas e resenhas são avaliações pessoais do leitor. Os dados bibliográficos e as edições de referência são identificados sempre que possível; informações ainda não confirmadas serão atualizadas conforme a pesquisa avançar.</div>
 </main>
-<footer>BIBLIOTECA DO JOÃO · UMA VIDA DE LEITURAS</footer>
+<footer>LEITOR CASUAL · UMA VIDA DE LEITURAS<span class="photo-credit">Imagem de fundo: <a href="https://www.pexels.com/photo/cozy-library-interior-with-wooden-balconies-33750808/" target="_blank" rel="noopener noreferrer">Giovanna Kamimura / Pexels</a></span></footer>
 <button id="backToTop" type="button" aria-label="Voltar ao topo" title="Voltar ao topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg></button>
 <script>
 (function () {
