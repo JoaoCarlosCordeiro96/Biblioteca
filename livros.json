@@ -150,17 +150,17 @@
     },
     {
       "id": "006",
-      "title": "De Frente com um Serial Killer",
-      "author": null,
+      "title": "De Frente com o Serial Killer: Novos Casos de Mindhunter",
+      "author": "John Douglas e Mark Olshaker",
       "originalTitle": null,
       "publicationYear": null,
       "country": null,
       "originalLanguage": null,
-      "publisher": null,
-      "editionYear": null,
-      "editionReference": null,
-      "pages": null,
-      "isbn": null,
+      "publisher": "HarperCollins Brasil",
+      "editionYear": 2020,
+      "editionReference": "Edição brasileira HarperCollins, 2020; ISBN 9786555110135.",
+      "pages": 334,
+      "isbn": "9786555110135",
       "genre": [],
       "themes": [],
       "series": null,
@@ -172,9 +172,11 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
+      "cover": "https://down-br.img.susercontent.com/file/sg-11134201-7qvfu-lja1vmazah3h54",
       "status": "lido",
-      "identityStatus": "identificação bibliográfica pendente"
+      "identityStatus": "identificação bibliográfica pendente",
+      "coverSource": "https://shopee.com.br/Livro-De-frente-com-o-serial-killer-Novos-casos-MINDHUNTER-i.977383792.23591790011",
+      "coverEditionReference": "HarperCollins Brasil, De frente com o serial killer: novos casos de Mindhunter. ISBN 9786555110135; edição brasileira de 2020, 334 páginas. Capa localizada em catálogo de marketplace."
     },
     {
       "id": "007",
@@ -237,16 +239,16 @@
     {
       "id": "009",
       "title": "As Espiãs do Dia D",
-      "author": null,
+      "author": "Ken Follett",
       "originalTitle": null,
       "publicationYear": null,
       "country": null,
       "originalLanguage": null,
-      "publisher": null,
-      "editionYear": null,
-      "editionReference": null,
-      "pages": null,
-      "isbn": null,
+      "publisher": "Editora Arqueiro",
+      "editionYear": 2021,
+      "editionReference": "2ª edição brasileira, 2021; tradução de Marcelo Mendes; ISBN 9786555651034.",
+      "pages": 528,
+      "isbn": "9786555651034",
       "genre": [],
       "themes": [],
       "series": null,
@@ -258,9 +260,11 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
+      "cover": "https://livrariascuritiba.vteximg.com.br/arquivos/ids/1964420-1000-1000/LV472710.jpg?v=638901406448000000",
       "status": "lido",
-      "identityStatus": "identificação bibliográfica pendente"
+      "identityStatus": "identificação bibliográfica pendente",
+      "coverSource": "https://www.livrariascuritiba.com.br/as-espias-do-dia-d-lv472710/p",
+      "coverEditionReference": "Editora Arqueiro, 2ª edição brasileira, 2021; tradução de Marcelo Mendes; ISBN 9786555651034. Capa de catálogo de livraria."
     },
     {
       "id": "010",
@@ -1304,8 +1308,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://tudosobreprodutos.com.br/img/harry-potter-e-a-pedra-filosofal-rocco.png",
+      "status": "lido",
+      "coverSource": "https://tudosobreprodutos.com.br/tudo-sobre-livro-harry-potter-e-a-pedra-filosofal",
+      "coverEditionReference": "Rocco, edição brasileira clássica. Capa da edição brasileira localizada em catálogo de produtos; exemplar efetivamente lido não confirmado."
     },
     {
       "id": "046",
@@ -1331,8 +1337,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://down-br.img.susercontent.com/file/sg-11134201-8224w-mhcde717gxe787",
+      "status": "lido",
+      "coverSource": "https://shopee.com.br/HARRY-POTTER-E-A-CAMARA-SECRETA-ROCCO-i.303956123.8697507682",
+      "coverEditionReference": "Rocco, edição brasileira clássica. Capa localizada em anúncio de livraria/marketplace; exemplar efetivamente lido não confirmado."
     },
     {
       "id": "047",
@@ -1358,8 +1366,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://cdn.awsli.com.br/2500x2500/1423/1423450/produto/80891248/a189984d13.jpg",
+      "status": "lido",
+      "coverSource": "https://www.movimentoliterario.com.br/harry-potter-e-o-prisioneiro-de-azkaban",
+      "coverEditionReference": "Rocco, edição brasileira clássica. Capa localizada em catálogo de livraria; exemplar efetivamente lido não confirmado."
     },
     {
       "id": "048",
@@ -1385,8 +1395,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://livrariascuritiba.vteximg.com.br/arquivos/ids/912635-525-525/LV113150.jpg?v=638761783533700000",
+      "status": "lido",
+      "coverSource": "https://www.livrariascuritiba.com.br/harry-potter-e-o-calice-de-fogo-4-lv113150/p",
+      "coverEditionReference": "Rocco, edição brasileira do volume 4. Capa localizada em catálogo de livraria; exemplar efetivamente lido não confirmado."
     },
     {
       "id": "049",
@@ -1412,8 +1424,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lrbvaxoihxkrad",
+      "status": "lido",
+      "coverSource": "https://shopee.com.br/Livro-Harry-Potter-e-a-Ordem-da-F%C3%AAnix-5-novo-e-lacrado-i.851173822.22892826276",
+      "coverEditionReference": "Rocco, edição brasileira do volume 5. Capa localizada em anúncio de marketplace; exemplar efetivamente lido não confirmado."
     },
     {
       "id": "050",
@@ -1439,8 +1453,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mernwguqzqpt79",
+      "status": "lido",
+      "coverSource": "https://shopee.com.br/Harry-Potter-e-o-Enigma-do-Pr%C3%ADncipe-i.240900535.22394425249",
+      "coverEditionReference": "Rocco, edição brasileira do volume 6. Capa localizada em anúncio de marketplace; exemplar efetivamente lido não confirmado."
     },
     {
       "id": "051",
@@ -1466,8 +1482,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://static.wixstatic.com/media/62fbbf_eca313d240ac4780a9df399c6cce505f~mv2.jpg/v1/fill/w_1000%2Ch_1000%2Cal_c%2Cq_85%2Cenc_avif%2Cquality_auto/62fbbf_eca313d240ac4780a9df399c6cce505f~mv2.jpg",
+      "status": "lido",
+      "coverSource": "https://www.purebrasil.com/product-page/livro-harry-potter-e-as-reliquias-da-morte-j-k-rowling-portugues-do-brasil-3",
+      "coverEditionReference": "Rocco, edição brasileira do volume 7. Capa localizada em catálogo de livraria; exemplar efetivamente lido não confirmado."
     },
     {
       "id": "052",
@@ -1493,18 +1511,20 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://m.media-amazon.com/images/I/51LK%2BDokKiL._SL500_.jpg",
+      "status": "lido",
+      "coverSource": "https://booklover.com.br/trilogia-da-tormenta-o-terceiro-deus-3-ed-leonel-caldela-9788583651291/",
+      "coverEditionReference": "Jambô, 3ª edição brasileira, ISBN 9788583651291; edição de referência localizada em catálogo de livraria."
     },
     {
       "id": "053",
       "title": "Ozob: Protocolo Molotov",
-      "author": null,
+      "author": "Leonel Caldela e Deive Pazos",
       "originalTitle": null,
       "publicationYear": null,
       "country": null,
       "originalLanguage": null,
-      "publisher": null,
+      "publisher": "NerdBooks / Jambô",
       "editionYear": null,
       "editionReference": null,
       "pages": null,
@@ -1520,9 +1540,11 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
+      "cover": "https://acdn-us.mitiendanube.com/stores/001/567/231/products/211-af3541797f8c5b71f216730980667821-1024-1024.webp",
       "status": "lido",
-      "identityStatus": "autoria/colaboração pendente"
+      "identityStatus": "autoria/colaboração pendente",
+      "coverSource": "https://overrungeek.com.br/produtos/ozob-vol-1-protocolo-molotov-2-edicao/",
+      "coverEditionReference": "Jambô/NerdBooks, 2ª edição de Ozob: Protocolo Molotov. Autoria de Leonel Caldela e Deive Pazos; capa localizada em catálogo de loja especializada."
     },
     {
       "id": "054",
@@ -1548,9 +1570,11 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
+      "cover": "https://martinsfontespaulista.vteximg.com.br/arquivos/ids/347283-292-292/821453_ampliada.jpg?v=637261001547870000",
       "status": "lido",
-      "identityStatus": "dados bibliográficos a confirmar"
+      "identityStatus": "dados bibliográficos a confirmar",
+      "coverSource": "https://www.martinsfontespaulista.com.br/a-joia-da-alma-821453/p",
+      "coverEditionReference": "Jambô, 1ª edição brasileira de 2017; ISBN 9788583650737; 384 páginas. Capa de catálogo de livraria."
     },
     {
       "id": "055",
@@ -1576,8 +1600,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://harpercollins.com.br/cdn/shop/files/9788595084742.jpg?v=1754636789",
+      "status": "lido",
+      "coverSource": "https://harpercollins.com.br/products/o-hobbit-jrr-tolkien",
+      "coverEditionReference": "HarperCollins Brasil; edição brasileira identificada pelo ISBN 9788595084742. Capa oficial da editora."
     },
     {
       "id": "056",
@@ -1603,8 +1629,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://martinsfontespaulista.vteximg.com.br/arquivos/ids/1531505-1000-1000/1032476.jpg?v=638128376014300000",
+      "status": "lido",
+      "coverSource": "https://www.martinsfontespaulista.com.br/a-lenda-de-ruff-ghanor---vol--1-1032476/p",
+      "coverEditionReference": "A Lenda de Ruff Ghanor, volume 1 — edição brasileira de O Garoto-Cabra. Capa localizada em catálogo de livraria; edição exata não confirmada."
     },
     {
       "id": "057",
@@ -1630,8 +1658,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://acdn-us.mitiendanube.com/stores/002/079/231/products/jamboeditora-rudd2-capa1-bc453b7fc4585838c016591169656130-1024-1024.webp",
+      "status": "lido",
+      "coverSource": "https://lojanerdz.com.br/produtos/a-lenda-de-ruff-ghanor-vol-2-o-herdeiro-do-leao/",
+      "coverEditionReference": "A Lenda de Ruff Ghanor, volume 2 — O Herdeiro do Leão. Capa localizada em catálogo de loja especializada; edição exata não confirmada."
     },
     {
       "id": "058",
@@ -1657,18 +1687,20 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://martinsfontespaulista.vteximg.com.br/arquivos/ids/1701063-1000-1000/1141361.jpg?v=638826538435800000",
+      "status": "lido",
+      "coverSource": "https://www.martinsfontespaulista.com.br/a-lenda-de-ruff-ghanor-vol--3---o-melhor-amigo-do-homem--2%C2%AA-edicao--1141361/p",
+      "coverEditionReference": "A Lenda de Ruff Ghanor, volume 3 — 2ª edição brasileira de O Melhor Amigo do Homem. Capa de catálogo de livraria."
     },
     {
       "id": "059",
-      "title": "Flecha de Fogo",
-      "author": null,
+      "title": "A Flecha de Fogo",
+      "author": "Leonel Caldela",
       "originalTitle": null,
       "publicationYear": null,
       "country": null,
       "originalLanguage": null,
-      "publisher": null,
+      "publisher": "Jambô Editora",
       "editionYear": null,
       "editionReference": null,
       "pages": null,
@@ -1684,9 +1716,11 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Publication114/v4/29/e8/f4/29e8f4a1-6da7-cc2a-a8a3-ea954d1a635d/1032690453.jpg/1200x1200wz.jpg",
       "status": "lido",
-      "identityStatus": "autor e série pendentes"
+      "identityStatus": "autor e série pendentes",
+      "coverSource": "https://jamboeditora.com.br/produto/a-flecha-de-fogo/",
+      "coverEditionReference": "Jambô/Tormenta, edição brasileira de A Flecha de Fogo, de Leonel Caldela. Imagem de capa correspondente à obra; edição lida não confirmada."
     },
     {
       "id": "060",
@@ -1712,8 +1746,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://down-br.img.susercontent.com/file/sg-11134201-7qvde-lkh2wco3nvcp07",
+      "status": "lido",
+      "coverSource": "https://jamboeditora.com.br/produto/trilogia-da-tormenta-vol-1-o-inimigo-do-mundo/",
+      "coverEditionReference": "Jambô, 4ª edição brasileira de O Inimigo do Mundo, de Leonel Caldela. Capa localizada em anúncio de marketplace; edição lida não confirmada."
     },
     {
       "id": "061",
@@ -1739,8 +1775,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://blulivro.cdn.magazord.com.br/img/2023/11/produto/122870/9786555321449.jpg?ims=fit-in%2F475x650%2Ffilters%3Afill%28white%29",
+      "status": "lido",
+      "coverSource": "https://www.blulivro.com.br/jogos-vorazes-capa-nova-rocco",
+      "coverEditionReference": "Rocco, edição brasileira de Jogos Vorazes, ISBN 9786555321449. Capa localizada em catálogo de livraria."
     },
     {
       "id": "062",
@@ -1766,8 +1804,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3urigaqdpzv68",
+      "status": "lido",
+      "coverSource": "https://shopee.com.br/Em-Chamas-Livro-2-Suzanne-Collins-i.399132687.20397996252",
+      "coverEditionReference": "Rocco, edição brasileira de Em Chamas. Capa localizada em catálogo de marketplace; edição exata não confirmada."
     },
     {
       "id": "063",
@@ -1793,8 +1833,10 @@
       "evaluationScope": "conjunta",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://acdn-us.mitiendanube.com/stores/003/867/223/products/livro-a-esperanca-jogos-vorazes-livro-3-suzanne-collins-pdf-04c70f63d48550f72117454527727999-1024-1024.webp",
+      "status": "lido",
+      "coverSource": "https://www.topofertasonline.com.br/produtos/livro-a-esperanca-e-book-pdf-jogos-vorazes-livro-3-suzanne-collins/",
+      "coverEditionReference": "Rocco, edição brasileira de A Esperança. Capa localizada em catálogo de livraria; edição exata não confirmada."
     },
     {
       "id": "064",
@@ -1820,22 +1862,24 @@
       "evaluationScope": "individual",
       "review": "Gostei muito deste livro. Por ser uma obra de ficção científica de outra época, é interessante perceber como nossa compreensão e nossos conceitos sobre o espaço mudaram desde então.\n\nA história, porém, continua excelente: é envolvente e tem um bom ritmo de leitura. Como obra literária, é muito importante para o gênero, e consigo reconhecer suas referências e influências em diversos lugares, desde filmes até outros livros.\n\nÉ uma leitura que recomendo, tanto pela qualidade da história quanto por sua importância para a ficção científica.",
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://aleph.com.br/cdn/shop/files/alp_3d2001Preto_Mockups6.png?v=1714169564&width=1445",
+      "status": "lido",
+      "coverSource": "https://editoraaleph.com.br/products/2001-uma-odisseia-no-espaco-1",
+      "coverEditionReference": "Editora Aleph, edição brasileira. Capa oficial da editora; edição lida não confirmada."
     },
     {
       "id": "065",
       "title": "O Crânio e o Corvo",
-      "author": null,
+      "author": "Leonel Caldela",
       "originalTitle": null,
       "publicationYear": null,
       "country": null,
       "originalLanguage": null,
-      "publisher": null,
-      "editionYear": null,
-      "editionReference": null,
-      "pages": null,
-      "isbn": null,
+      "publisher": "Jambô",
+      "editionYear": 2007,
+      "editionReference": "Edição brasileira Jambô, 2007; ISBN 9788589134248.",
+      "pages": 512,
+      "isbn": "9788589134248",
       "genre": [],
       "themes": [],
       "series": null,
@@ -1847,9 +1891,11 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
+      "cover": "https://covers.storytel.com/jpg-640/9789152151556.a2598314-0eeb-4f8a-acc2-7a3a1160c1f6?optimize=high&quality=70&width=600",
       "status": "lido",
-      "identityStatus": "identificação bibliográfica pendente"
+      "identityStatus": "identificação bibliográfica pendente",
+      "coverSource": "https://lojasebocultural.com.br/produto/o-cranio-e-o-corvo/",
+      "coverEditionReference": "Jambô, edição brasileira de 2007, ISBN 9788589134248; 512 páginas. Imagem de capa consultada em catálogo de áudio digital; pode diferir da edição impressa."
     },
     {
       "id": "066",
@@ -1875,8 +1921,10 @@
       "evaluationScope": "individual",
       "review": null,
       "personalNotes": null,
-      "cover": null,
-      "status": "lido"
+      "cover": "https://aleph.com.br/cdn/shop/files/alp_Messias-de-Duna_Cadastro_Geral4.png?v=1725474797",
+      "status": "lido",
+      "coverSource": "https://aleph.com.br/products/messias-de-duna",
+      "coverEditionReference": "Editora Aleph, edição brasileira em capa dura, tradução de Maria do Carmo Zanini; 272 páginas. Capa oficial da editora."
     }
   ]
 }
