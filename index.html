@@ -72,7 +72,7 @@ select{cursor:pointer}
 .book-title{margin:4px 0 7px;color:#f4ead5;font-size:19px;font-weight:400;line-height:1.22;overflow-wrap:anywhere}
 .author{color:#c0b098;font:12px/1.5 Arial,sans-serif}
 .book-meta{display:grid;gap:4px;margin-top:12px;color:#a9977d;font:10px/1.45 Arial,sans-serif}
-.book-meta span{display:block}
+.book-meta span{display:block}.book-meta strong{color:#c9b18d;font-weight:600}
 .genre-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 .genre-tag{display:inline-flex;align-items:center;padding:5px 9px;border:1px solid #6a5035;border-radius:999px;background:#2b1e13;color:#e7d3b1;font:10px Arial,sans-serif}
 .genre-aventura{border-color:#6c8855;color:#d5e7ba;background:rgba(72,104,53,.18)}
@@ -217,11 +217,13 @@ footer{border-top:1px solid var(--line);padding:26px;text-align:center;backgroun
       const author = escapeHtml(book.author || "Autor a confirmar");
       const cover = book.cover ? '<img class="cover-image" src="' + escapeHtml(book.cover) + '" alt="Capa de ' + title + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : "";
       const missingCover = '<div class="cover-missing" ' + (book.cover ? 'style="display:none"' : "") + ' aria-label="Capa ainda não cadastrada"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v18H6.5A2.5 2.5 0 0 1 4 17.5z"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20M8 6h8M8 9h8"/></svg></div>';
-      const metaItems = [];
-      if (book.pages) metaItems.push(book.pages + " páginas");
-      if (book.editionYear) metaItems.push("Edição: " + book.editionYear);
-      if (book.readYear) metaItems.push("Leitura: " + book.readYear);
-      const meta = metaItems.length ? '<div class="book-meta">' + metaItems.map(x=>'<span>'+escapeHtml(x)+'</span>').join("") + '</div>' : "";
+      const metaItems = [
+        ["Páginas", book.pages ? String(book.pages) : "Não informado"],
+        ["Ano de lançamento", book.publicationYear ? String(book.publicationYear) : "Não informado"]
+      ];
+      if (book.editionYear) metaItems.push(["Edição", String(book.editionYear)]);
+      if (book.readYear) metaItems.push(["Leitura", String(book.readYear)]);
+      const meta = '<div class="book-meta">' + metaItems.map(([label,value])=>'<span><strong>'+escapeHtml(label)+':</strong> '+escapeHtml(value)+'</span>').join("") + '</div>';
       const genreTags = Array.isArray(book.genre) && book.genre.length ? '<div class="genre-tags">' + book.genre.map(g=>'<span class="genre-tag ' + categoryClass(g) + '">' + escapeHtml(g) + '</span>').join("") + '</div>' : "";
       const rating = typeof book.rating === "number"
         ? '<div class="rating">★ ' + book.rating.toFixed(1).replace(".",",") + '/10 · ' + (book.recommend ? "Recomendaria" : "Não recomendaria") + '</div>'
