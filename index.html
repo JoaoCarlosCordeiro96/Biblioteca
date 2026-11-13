@@ -81,7 +81,7 @@ select{cursor:pointer}
   padding:15px 17px 13px;border:1px solid rgba(171,127,70,.56);border-radius:12px;
   background:linear-gradient(135deg,rgba(30,20,13,.82),rgba(14,10,7,.88));box-shadow:0 12px 32px rgba(0,0,0,.18);
 }
-.toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:11px}
+.toolbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:11px}
 .filter-control{min-width:0}
 .filter-control label{display:block;margin:0 0 7px 2px;color:var(--gold-bright);font:11px Arial,sans-serif;letter-spacing:.25px}
 .filter-control select{height:43px}
@@ -125,6 +125,7 @@ select{cursor:pointer}
 .book-title{margin:0 0 6px;color:#f5ead7;font-size:18px;font-weight:400;line-height:1.23;overflow-wrap:anywhere}
 .author{color:#c1b092;font:11px/1.5 Arial,sans-serif}
 .book-meta{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;width:100%;margin-top:12px;color:#c5b398;font:10px/1.4 Arial,sans-serif}
+.book-meta span{overflow-wrap:anywhere}
 .book-meta span{display:flex;align-items:flex-start;gap:5px;min-width:0}
 .book-meta strong{color:#f0d29d;font-weight:600}
 .genre-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
@@ -298,7 +299,6 @@ footer{width:min(1500px,calc(100% - 56px));margin:0 auto;border-top:1px solid rg
         <div class="filter-control"><label for="styleFilter">Categoria</label><select id="styleFilter" aria-label="Filtrar por categoria"><option value="all">Todas as categorias</option></select></div>
         <div class="filter-control"><label for="authorFilter">Autor</label><select id="authorFilter" aria-label="Filtrar por autor"><option value="all">Todos os autores</option></select></div>
         <div class="filter-control"><label for="filter">Nota / recomendação</label><select id="filter" aria-label="Filtrar livros"><option value="all">Todas as avaliações</option><option value="recommended">Recomendaria</option><option value="notRecommended">Não recomendaria</option><option value="rated">Avaliados</option><option value="unrated">Ainda sem avaliação</option></select></div>
-        <div class="filter-control"><label for="sort">Ordenar por</label><select id="sort" aria-label="Ordenar livros"><option value="title">Título (A–Z)</option><option value="rating">Melhor nota</option><option value="readYear">Ano da leitura</option></select></div>
         <button class="clear-filters" id="clearFilters" type="button">↺ &nbsp;Limpar filtros</button>
       </div>
       <div class="category-row" id="categoryChips" aria-label="Atalhos por categoria"></div>
@@ -389,7 +389,8 @@ footer{width:min(1500px,calc(100% - 56px));margin:0 auto;border-top:1px solid rg
   function bookMeta(book) {
     const items = [
       ["Páginas", book.pages ? String(book.pages) : "Não informado"],
-      ["Lançamento", book.publicationYear ? String(book.publicationYear) : "Não informado"]
+      ["Ano de lançamento", book.publicationYear ? String(book.publicationYear) : "Não informado"],
+      ["Leitura", book.readYear ? String(book.readYear) : "Não informado"]
     ];
     return '<div class="book-meta">' + items.map(([label,value]) => '<span><strong>' + escapeHtml(label) + ':</strong> ' + escapeHtml(value) + '</span>').join("") + '</div>';
   }
@@ -399,7 +400,7 @@ footer{width:min(1500px,calc(100% - 56px));margin:0 auto;border-top:1px solid rg
     const filter = get("filter").value;
     const styleFilter = get("styleFilter").value;
     const authorFilter = get("authorFilter").value;
-    const sort = get("sort").value;
+    const sort = get("sortMirror").value;
     let shown = books.filter(book => {
       const searchable = normalize((book.title || "") + " " + (book.author || ""));
       const matchesQuery = searchable.includes(query);
@@ -521,12 +522,7 @@ footer{width:min(1500px,calc(100% - 56px));margin:0 auto;border-top:1px solid rg
     if (id === "styleFilter") updateCategoryChips();
     render();
   }));
-  ["sort","sortMirror"].forEach(id => get(id).addEventListener("change", () => {
-    const value = get(id).value;
-    get("sort").value = value;
-    get("sortMirror").value = value;
-    render();
-  }));
+  get("sortMirror").addEventListener("change",render);
   get("categoryChips").addEventListener("click", event => {
     const button = event.target.closest("button[data-category]");
     if (!button) return;
@@ -539,7 +535,6 @@ footer{width:min(1500px,calc(100% - 56px));margin:0 auto;border-top:1px solid rg
     get("styleFilter").value = "all";
     get("authorFilter").value = "all";
     get("filter").value = "all";
-    get("sort").value = "title";
     get("sortMirror").value = "title";
     updateCategoryChips();
     render();
