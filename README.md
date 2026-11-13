@@ -9,7 +9,7 @@ Catálogo literário de leituras, avaliações e resenhas.
 
 ## Imagem de fundo
 
-- Fotografia: kkmarais / Flickr, *Detail of Reading room in the Ervin Szabo Library* (2017), via Wikimedia Commons.
-- Fonte: https://commons.wikimedia.org/wiki/File:Detail_of_Reading_room_in_the_Ervin_Szabo_Library_(42403663685).jpg
-- Licença: [Creative Commons Attribution 2.0 (CC BY 2.0)](https://creativecommons.org/licenses/by/2.0/).
-- Enquadramento e sobreposição escura adaptados em CSS; crédito exibido no rodapé do site.
+- Fotografia: Brett Wharton, *A large library with a lot of books on the shelves* (Los Poblanos Historic Inn), publicada no Unsplash em 18/02/2025.
+- Fonte: https://unsplash.com/photos/a-large-library-with-a-lot-of-books-on-the-shelves-XaVW0jy1hd4
+- Uso sob a [Unsplash License](https://unsplash.com/license), com crédito no rodapé.
+- A imagem aparece como moldura no topo e nas laterais; a área central recebe sobreposição escura para preservar a leitura.
